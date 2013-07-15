@@ -1,3 +1,3 @@
-[user]
-  name = Cameron Yule
-  email = cameronyule@preloaded.com
+[alias]
+  ci = commit
+  st = status
