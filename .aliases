@@ -47,3 +47,6 @@ alias spoton="sudo mdutil -a -i on"
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
+
+# Prefer Macvim’s terminal mode to OS X’ vim
+alias vim='mvim -v'
