@@ -3,7 +3,7 @@
   autocrlf = input
   safecrlf = true
   quotepath = false
-  excludesfile = /Users/cameronyule/.gitignore
+  excludesfile = $HOME/.gitignore
 [alias]
   co = checkout
   ci = commit
@@ -12,3 +12,5 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+[push]
+  default = current
