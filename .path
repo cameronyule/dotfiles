@@ -1,2 +1,9 @@
+# User Scripts
+export PATH="$HOME/bin:$PATH"
+
+# Homebrew
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+# NPM
 export PATH="/usr/local/share/npm/bin:$PATH"
