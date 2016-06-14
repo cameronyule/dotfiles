@@ -14,12 +14,14 @@ brew 'docker-machine'
 brew 'git'
 brew 'gnupg'
 brew 'keybase'
+brew 'leiningen'
 #brew 'mas', args: ['force-bottle']
 brew 'node'
 brew 'shellcheck'
 brew 'sysdig'
 brew 'trash'
 brew 'tree'
+brew 'xz'
 
 # Mac Applications
 
@@ -29,7 +31,6 @@ cask 'banktivity'
 cask 'caffeine'
 cask 'cyberduck'
 cask 'daisydisk'
-cask 'dash'
 #mas 'dash', id: 449589707
 cask 'dropbox'
 cask 'evernote'
@@ -42,12 +43,14 @@ cask 'handbrake'
 cask 'java'
 cask 'omnifocus'
 #mas 'pocket', id: 568494494
+#mas 'pomodoro-one', id: 907364780
 cask 'skype'
+cask 'sonos'
 cask 'spectacle'
 cask 'spotify'
 cask 'steam'
 cask 'the-unarchiver'
-#mas 'twitter', id: 409789998
-cask 'vlc'
-cask 'sonos'
 cask 'transmission'
+#mas 'twitter', id: 409789998
+cask 'virtualbox'
+cask 'vlc'
