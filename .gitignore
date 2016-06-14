@@ -1,0 +1,12 @@
+# Folder view configuration files
+.DS_Store
+
+# Thumbnail cache files
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# The extras file for the dotfiles project itself
+.extra
