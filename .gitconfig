@@ -14,3 +14,6 @@
   dump = cat-file -p
 [push]
   default = current
+[user]
+	name = Cameron Yule
+	email = cameron@cameronyule.com
