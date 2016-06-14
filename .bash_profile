@@ -26,4 +26,4 @@ done
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # Enable the Nix package manager
-source .nix-profile/etc/profile.d/nix.sh
+source $HOME/.nix-profile/etc/profile.d/nix.sh
