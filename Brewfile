@@ -17,6 +17,7 @@ brew 'keybase'
 brew 'leiningen'
 #brew 'mas', args: ['force-bottle']
 brew 'node'
+brew 'rbenv'
 brew 'shellcheck'
 brew 'sysdig'
 brew 'trash'
