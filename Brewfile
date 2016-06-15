@@ -44,6 +44,7 @@ cask 'java'
 cask 'omnifocus'
 #mas 'pocket', id: 568494494
 #mas 'pomodoro-one', id: 907364780
+cask 'processing'
 cask 'skype'
 cask 'sonos'
 cask 'spectacle'
