@@ -3,7 +3,7 @@
   autocrlf = input
   safecrlf = true
   quotepath = false
-  excludesfile = $HOME/.gitignore
+  excludesFile = ~/.gitignore
 [alias]
   co = checkout
   ci = commit
