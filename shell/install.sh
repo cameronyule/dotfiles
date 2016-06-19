@@ -8,6 +8,7 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 	      --exclude "README.md" --exclude "LICENSE-MIT.txt" \
 	      --exclude "install.sh" --exclude "Brewfile" --exclude "osx.sh" \
+	      --exclude "Solarized Dark ansi.terminal" \
 	      -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
