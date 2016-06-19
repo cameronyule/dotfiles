@@ -20,7 +20,6 @@ I haven't written a fully automated install script, so installation is currently
 
 ```bash
 ./xcode/install-clt.sh
-./nix/install.sh
 ./homebrew/install.sh
 ```
 

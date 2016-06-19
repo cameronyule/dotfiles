@@ -26,6 +26,3 @@ done
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
   . $(brew --prefix)/share/bash-completion/bash_completion
 fi
-
-# Enable the Nix package manager
-source $HOME/.nix-profile/etc/profile.d/nix.sh
