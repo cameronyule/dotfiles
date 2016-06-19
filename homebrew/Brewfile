@@ -48,6 +48,9 @@ cask 'omnifocus'
 #mas 'pocket', id: 568494494
 #mas 'pomodoro-one', id: 907364780
 cask 'processing'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-json'
 cask 'skype'
 cask 'sonos'
 cask 'spectacle'
