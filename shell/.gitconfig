@@ -1,0 +1,19 @@
+[core]
+  editor = emacs -nw
+  autocrlf = input
+  safecrlf = true
+  quotepath = false
+  excludesFile = ~/.gitignore
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[push]
+  default = current
+[user]
+	name = Cameron Yule
+	email = cameron@cameronyule.com
