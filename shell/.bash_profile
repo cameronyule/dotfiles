@@ -23,7 +23,9 @@ for option in autocd globstar; do
 done
 
 # If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+  . $(brew --prefix)/share/bash-completion/bash_completion
+fi
 
 # Enable the Nix package manager
 source $HOME/.nix-profile/etc/profile.d/nix.sh

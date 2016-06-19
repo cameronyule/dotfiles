@@ -35,6 +35,7 @@ brew bundle --file=homebrew/Brewfile
 
 ```bash
 ./shell/install.sh
+./shell/configure-bash.sh
 ```
 
 ### Optional
@@ -52,7 +53,6 @@ brew bundle --file=homebrew/Brewfile
   * Email client (i.e. [Airmail](), [Nylas N1](), etc).
 * Emacs setup
 * Terminal setup
-  * Configure command completions.
   * Configure custom prompt.
   * Evaluate other terminal emulators (i.e. [iTerm](https://www.iterm2.com/)).
   * Evaluate other shells (i.e. [zsh](http://www.zsh.org/)).

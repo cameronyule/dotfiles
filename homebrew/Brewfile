@@ -1,12 +1,15 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'homebrew/versions'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
 # Terminal
 
 brew 'awscli'
+brew 'bash'
+brew 'bash-completion2'
 brew 'certbot'
 brew 'coreutils'
 brew 'docker'
