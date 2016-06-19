@@ -56,5 +56,4 @@ brew bundle --file=homebrew/Brewfile
   * Configure custom prompt.
   * Evaluate other terminal emulators (i.e. [iTerm](https://www.iterm2.com/)).
   * Evaluate other shells (i.e. [zsh](http://www.zsh.org/)).
-* Setting a [custom umask in OS X](https://support.apple.com/en-gb/HT201684).
 * Automated install script.
