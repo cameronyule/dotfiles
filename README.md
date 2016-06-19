@@ -49,8 +49,6 @@ brew bundle --file=homebrew/Brewfile
 * Base system
   * Configure Energy Saver preferences.
   * Configure Desktop & Screen Saver preferences.
-* Applications
-  * Email client (i.e. [Airmail](), [Nylas N1](), etc).
 * Emacs setup
 * Terminal setup
   * Configure custom prompt.
