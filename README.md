@@ -34,7 +34,7 @@ brew bundle --file=homebrew/Brewfile
 ### Dotfiles
 
 ```bash
-./shell/install.sh
+./shell/install-dotfiles.sh
 ./shell/configure-bash.sh
 ```
 
