@@ -27,9 +27,7 @@ I haven't written a fully automated install script, so installation is currently
 ### Applications
 
 ```bash
-cd homebrew
-brew bundle
-cd ..
+brew bundle --file=homebrew/Brewfile
 ./system/configure-login-items.sh
 ```
 
