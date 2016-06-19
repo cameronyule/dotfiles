@@ -1,6 +1,60 @@
+# Dotfiles
 
+A semi-automated setup of my macOS environment.
 
+Partially based on Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles).
 
+## Usage
 
+I haven't written a fully automated install script, so installation is currently a multi-step process.
 
-https://support.apple.com/en-gb/HT201684
+### Base System
+
+```bash
+./system/software-update.sh
+./system/enable-filevault.sh
+./system/configure-defaults.sh
+```
+
+### Development Environment
+
+```bash
+./xcode/install-clt.sh
+./nix/install.sh
+./homebrew/install.sh
+```
+
+### Applications
+
+```bash
+cd homebrew
+brew bundle
+cd ..
+./system/configure-login-items.sh
+```
+
+### Dotfiles
+
+```bash
+./shell/install.sh
+```
+
+### Optional
+
+```bash
+./xcode/install-documentation.sh
+```
+
+## Todo
+
+* Base system
+  * Configure Energy Saver preferences.
+  * Configure Desktop & Screen Saver preferences.
+* Emacs setup
+* Terminal setup
+  * Configure command completions.
+  * Configure custom prompt.
+  * Evaluate other terminal emulators (i.e. [iTerm](https://www.iterm2.com/)).
+  * Evaluate other shells (i.e. [zsh](http://www.zsh.org/)).
+* Setting a [custom umask in OS X](https://support.apple.com/en-gb/HT201684).
+* Automated install script.
