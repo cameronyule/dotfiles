@@ -14,6 +14,7 @@ brew 'certbot'
 brew 'coreutils'
 brew 'docker'
 brew 'docker-machine'
+brew 'dockutil'
 brew 'emacs', args: ['with-cocoa', 'with-gnutls', 'devel']
 brew 'git'
 brew 'gnupg'
