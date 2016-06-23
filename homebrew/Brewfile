@@ -18,11 +18,13 @@ brew 'dockutil'
 brew 'emacs', args: ['with-cocoa', 'with-gnutls', 'devel']
 brew 'git'
 brew 'gnupg'
+brew 'ffmpeg'
 brew 'keybase'
 brew 'leiningen'
 brew 'mas', args: ['force-bottle']
 brew 'node'
 brew 'rbenv'
+brew 'librsvg'
 brew 'shellcheck'
 brew 'sysdig'
 brew 'tmux'
