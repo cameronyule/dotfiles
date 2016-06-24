@@ -49,6 +49,14 @@ brew bundle --file=homebrew/Brewfile
   * Configure Energy Saver preferences.
   * Configure Desktop & Screen Saver preferences.
 * Emacs setup
+  * Default [font size](https://www.emacswiki.org/emacs/SetFonts).
+  * Emacs.app [macOS specific configuration](https://www.emacswiki.org/emacs/EmacsApp).
+  * Evaluate [cyberpunk-theme](https://github.com/n3mo/cyberpunk-theme.el).
+  * Auto-setup of package.el dependencies.
+  * Git gutter.
+  * Markdown mode.
+  * Project configuration.
+  * Auto-completion ([company-mode](https://company-mode.github.io/), [emacs-ycmd](https://github.com/abingham/emacs-ycmd)).
 * Terminal setup
   * Configure custom prompt.
   * Evaluate other terminal emulators (i.e. [iTerm](https://www.iterm2.com/)).
