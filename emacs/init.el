@@ -1,8 +1,13 @@
-(package-initialize)
+(require 'package)
 
 ;; Package source configuration.
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
+
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; Package configuration.
 
@@ -21,15 +26,38 @@
   :ensure t
   :pin melpa)
 
+;; https://github.com/purcell/exec-path-from-shell
+(use-package exec-path-from-shell
+  :ensure t
+  :pin melpa)
+
+;; https://github.com/syohex/emacs-git-gutter
+(use-package git-gutter
+  :ensure t
+  :pin melpa)
+
+;; https://github.com/magit/magit
+(use-package magit
+  :ensure t
+  :pin melpa)
+
+;; https://github.com/Fanael/rainbow-delimiters
+(use-package rainbow-delimiters
+  :ensure t
+  :pin melpa)
+
+;; https://github.com/nonsequitur/smex
+(use-package smex
+  :ensure t
+  :pin melpa)
+
 ;; https://github.com/bbatsov/solarized-emacs
 (use-package solarized-theme
   :ensure t
   :pin melpa)
 
-;; Unsure why this is necessary, as it should be picking up my system PATH.
-;; TODO: Investigate.
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;; Keep any customize declarations separately. 
 (setq custom-file "~/.emacs.d/custom.el")
@@ -59,7 +87,13 @@
 
 ;; Enable useful minor modes
 (global-linum-mode 1)
+
+;; https://www.emacswiki.org/emacs/InteractivelyDoThings
 (ido-mode 1)
+(setq ido-enable-flex-matching t)
+
+(global-git-gutter-mode 1)
+
 (show-paren-mode 1)
 (global-company-mode 1)
 
