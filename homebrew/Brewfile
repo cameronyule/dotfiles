@@ -16,6 +16,7 @@ brew 'docker'
 brew 'docker-machine'
 brew 'dockutil'
 brew 'emacs', args: ['with-cocoa', 'with-gnutls', 'devel']
+brew 'emscripten', args: ['with-closure-compiler']
 brew 'git'
 brew 'gnupg'
 brew 'ffmpeg'
