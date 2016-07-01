@@ -7,6 +7,7 @@ tap 'caskroom/versions'
 
 # Terminal
 
+brew 'ant'
 brew 'awscli'
 brew 'bash'
 brew 'bash-completion2'
@@ -49,10 +50,8 @@ cask 'daisydisk'
 mas 'dash', id: 449589707
 cask 'dropbox'
 cask 'evernote'
-cask 'firefox'
 cask 'firefoxdeveloperedition'
 cask 'flux'
-cask 'focus'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'istat-menus'
