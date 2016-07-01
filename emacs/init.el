@@ -116,3 +116,6 @@
 ;; https://www.emacswiki.org/emacs/InteractivelyDoThings
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
+
+;; Allow hash to be entered  
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
