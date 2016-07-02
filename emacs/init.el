@@ -28,10 +28,20 @@
   :ensure t
   :pin melpa)
 
+;; https://github.com/n3mo/cyberpunk-theme.el
+;;(use-package cyberpunk-theme
+;;  :ensure t
+;;  :pin melpa
+;;  :config
+;;  (load-theme 'cyberpunk t))
+
 ;; https://github.com/purcell/exec-path-from-shell
 (use-package exec-path-from-shell
   :ensure t
-  :pin melpa)
+  :pin melpa
+  :config
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize)))
 
 ;; https://github.com/syohex/emacs-git-gutter
 (use-package git-gutter
@@ -44,6 +54,12 @@
 (use-package magit
   :ensure t
   :pin melpa)
+
+;; https://github.com/jrblevin/markdown-mode
+(use-package markdown-mode
+  :ensure t
+  :pin melpa
+  )
 
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
@@ -82,9 +98,6 @@
   :pin melpa
   :config
   (global-undo-tree-mode 1))
-
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
 
 ;; Keep any customize declarations separately. 
 (setq custom-file "~/.emacs.d/custom.el")
