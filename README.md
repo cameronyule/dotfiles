@@ -14,6 +14,7 @@ I haven't written a fully automated install script, so installation is currently
 ./system/software-update.sh
 ./system/enable-filevault.sh
 ./system/configure-defaults.sh
+./system/set-umask.sh
 ```
 
 ### Development Environment
@@ -28,6 +29,7 @@ I haven't written a fully automated install script, so installation is currently
 ```bash
 brew bundle --file=homebrew/Brewfile
 ./system/configure-login-items.sh
+./system/configure-dock.sh
 ```
 
 ### Dotfiles
@@ -37,19 +39,11 @@ brew bundle --file=homebrew/Brewfile
 ./shell/configure-bash.sh
 ```
 
-### Optional
-
-```bash
-./xcode/install-documentation.sh
-```
-
 ## Todo
 
 * Base system
   * Configure Energy Saver preferences.
   * Configure Desktop & Screen Saver preferences.
-* Emacs setup
-  * [Markdown mode](https://melpa.org/#/markdown-mode).
 * Terminal setup
   * Configure custom prompt.
   * Evaluate other shells (i.e. [zsh](http://www.zsh.org/)).
