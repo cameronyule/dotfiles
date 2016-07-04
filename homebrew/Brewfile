@@ -38,7 +38,7 @@ brew 'xz'
 # Mac Applications
 
 cask '1password'
-cask 'airmail-beta'
+mas 'airmail', id: 918858936
 cask 'appcleaner'
 cask 'banktivity'
 cask 'bbc-iplayer-downloads'
