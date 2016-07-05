@@ -7,9 +7,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-    --exclude "README.md" --exclude "LICENSE-MIT.txt" \
-    --exclude "install.sh" --exclude "Brewfile" --exclude "osx.sh" \
+  rsync --exclude "install-dotfiles.sh" \
     --exclude "Solarized Dark ansi.terminal" \
     --exclude "configure-bash.sh" \
     -avh --no-perms . ~;
