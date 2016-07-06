@@ -58,8 +58,7 @@
 ;; https://github.com/jrblevin/markdown-mode
 (use-package markdown-mode
   :ensure t
-  :pin melpa
-  )
+  :pin melpa)
 
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
@@ -70,13 +69,17 @@
 
 ;; https://github.com/Fanael/rainbow-delimiters
 (use-package rainbow-delimiters
+  :init
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
   :ensure t
   :pin melpa)
 
 ;; https://github.com/nonsequitur/smex
 (use-package smex
   :ensure t
-  :pin melpa)
+  :pin melpa
+  :config
+  (smex-initialize))
 
 ;; https://github.com/bbatsov/solarized-emacs
 (use-package solarized-theme
