@@ -18,8 +18,6 @@ dockutil --add /Applications/OmniFocus.app
 dockutil --add /Applications/Evernote.app
 dockutil --add /Applications/1Password\ 6.app
 
-dockutil --add /Applications/Pocket.app
-
 dockutil --add /Applications/Spotify.app
 dockutil --add /Applications/Sonos.app
 
