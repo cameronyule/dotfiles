@@ -23,29 +23,12 @@
 ;; Package configuration.
 ;; TODO: Bootstrap the install of use-package itself.
 
-;; https://github.com/clojure-emacs/cider
-(use-package cider
-  :ensure t
-  :pin melpa)
-
 ;; https://company-mode.github.io/
 (use-package company
   :ensure t
   :pin melpa
   :config
   (global-company-mode 1))
-
-;; https://github.com/clojure-emacs/clj-refactor.el
-(use-package clj-refactor
-  :ensure t
-  :pin melpa)
-
-;; https://github.com/n3mo/cyberpunk-theme.el
-;;(use-package cyberpunk-theme
-;;  :ensure t
-;;  :pin melpa
-;;  :config
-;;  (load-theme 'cyberpunk t))
 
 ;; https://github.com/purcell/exec-path-from-shell
 (use-package exec-path-from-shell
@@ -66,16 +49,6 @@
 (use-package magit
   :ensure t
   :pin melpa)
-
-;; https://github.com/jrblevin/markdown-mode
-;; (use-package markdown-mode
-;;   :ensure t
-;;   :pin melpa-stable
-;;   :commands (markdown-mode gfm-mode)
-;;   :mode (("README\\.md\\'" . gfm-mode)
-;;          ("\\.md\\'" . markdown-mode)
-;;          ("\\.markdown\\'" . markdown-mode))
-;;   :init (setq markdown-command "marked"))
 
 (use-package org
   :ensure t
