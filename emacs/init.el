@@ -58,9 +58,10 @@
          ("C-c a" . org-agenda)
          :map org-mode-map)
   :mode ("\\.org$" . org-mode)
+  :init
+  (setq org-startup-folded 'content)
   :config
-  (require 'ox-md nil t)
-)
+  (require 'ox-md nil t))
 
 ;; https://github.com/larstvei/ox-gfm
 (use-package ox-gfm
