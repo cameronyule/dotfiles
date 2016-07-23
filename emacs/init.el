@@ -79,7 +79,7 @@
   :ensure t
   :pin melpa
   :config
-  (smex-initialize))
+  (global-set-key (kbd "M-x") 'smex))
 
 ;; https://github.com/bbatsov/solarized-emacs
 (use-package solarized-theme
