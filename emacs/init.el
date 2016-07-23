@@ -1,15 +1,27 @@
 (require 'package)
 
 ;; Package source configuration.
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+(setq
+ package-archives
+ '(("melpa-stable" . "http://stable.melpa.org/packages/")
+   ("melpa"        . "http://melpa.org/packages/")
+   ("org"          . "http://orgmode.org/elpa/")
+   ("gnu"          . "http://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; Workaround use-package's inability to replace built-in packages such as org.
+;; https://github.com/jwiegley/use-package/issues/319#issuecomment-185979556
+(defun package-from-archive (f &rest args)
+  (and (apply f args)
+       (assq (car args) package-alist)))
+(advice-add 'package-installed-p :around 'package-from-archive)
+
 ;; Package configuration.
+;; TODO: Bootstrap the install of use-package itself.
 
 ;; https://github.com/clojure-emacs/cider
 (use-package cider
@@ -64,6 +76,18 @@
 ;;          ("\\.md\\'" . markdown-mode)
 ;;          ("\\.markdown\\'" . markdown-mode))
 ;;   :init (setq markdown-command "marked"))
+
+(use-package org
+  :ensure t
+  :pin org
+  :bind (("C-c l" . org-store-link)
+         ("C-c c" . org-capture)
+         ("C-c a" . org-agenda)
+         :map org-mode-map)
+  :mode ("\\.org$" . org-mode)
+  :config
+  (require 'ox-md nil t)
+)
 
 ;; https://github.com/larstvei/ox-gfm
 (use-package ox-gfm
@@ -145,13 +169,3 @@
 
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
-
-;; Orgmode configuration
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-cb" 'org-iswitchb)
-
-;; Enable orgmode markdown backend
-(require 'ox-md nil t)
-
