@@ -56,7 +56,17 @@
   :pin melpa)
 
 ;; https://github.com/jrblevin/markdown-mode
-(use-package markdown-mode
+;; (use-package markdown-mode
+;;   :ensure t
+;;   :pin melpa-stable
+;;   :commands (markdown-mode gfm-mode)
+;;   :mode (("README\\.md\\'" . gfm-mode)
+;;          ("\\.md\\'" . markdown-mode)
+;;          ("\\.markdown\\'" . markdown-mode))
+;;   :init (setq markdown-command "marked"))
+
+;; https://github.com/larstvei/ox-gfm
+(use-package ox-gfm
   :ensure t
   :pin melpa)
 
@@ -141,3 +151,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+;; Enable orgmode markdown backend
+(require 'ox-md nil t)
+
