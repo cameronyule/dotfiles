@@ -38,6 +38,11 @@ brew bundle --file=homebrew/Brewfile
 ./shell/install-dotfiles.sh
 ./shell/configure-bash.sh
 ```
+### Emacs
+
+```bash
+./emacs/install.sh
+```
 
 ## Todo
 
