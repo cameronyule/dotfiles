@@ -3,7 +3,7 @@
 ;; Package source configuration.
 (setq
  package-archives
- '(("melpa-stable" . "http://stable.melpa.org/packages/")
+ '(("melpa-stable" . "https://stable.melpa.org/packages/")
    ("melpa"        . "https://melpa.org/packages/")
    ("org"          . "http://orgmode.org/elpa/")
    ("gnu"          . "https://elpa.gnu.org/packages/")))
@@ -67,6 +67,13 @@
 (use-package ox-gfm
   :ensure t
   :pin melpa)
+
+;; https://github.com/milkypostman/powerline
+(use-package powerline
+  :ensure t
+  :pin melpa-stable
+  :config
+  (powerline-default-theme))
 
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
