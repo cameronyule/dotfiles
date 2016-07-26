@@ -1,121 +1,56 @@
-(require 'package)
+;;
+;; Using Cask for package management.
+;; https://github.com/cask/cask
+;;
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize)
 
-;; Package source configuration.
-(setq
- package-archives
- '(("melpa-stable" . "https://stable.melpa.org/packages/")
-   ("melpa"        . "https://melpa.org/packages/")
-   ("org"          . "http://orgmode.org/elpa/")
-   ("gnu"          . "https://elpa.gnu.org/packages/")))
+;;
+;; Plugin configuration
+;;
 
-(package-initialize)
+;; Company
+(global-company-mode 1)
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
+;; Exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
-;; Workaround use-package's inability to replace built-in packages such as org.
-;; https://github.com/jwiegley/use-package/issues/319#issuecomment-185979556
-(defun package-from-archive (f &rest args)
-  (and (apply f args)
-       (assq (car args) package-alist)))
-(advice-add 'package-installed-p :around 'package-from-archive)
+;; Git-gutter
+(global-git-gutter-mode 1)
 
-;; Package configuration.
-;; TODO: Bootstrap the install of use-package itself.
+;; org
+;; (global-set-key "\C-cl" 'org-store-link)
+;; (global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cc" 'org-capture)
+;; (global-set-key "\C-cb" 'org-iswitchb)
+;; (setq org-startup-folded 'content)
+;; (require 'ox-md nil t))
 
-;; https://company-mode.github.io/
-(use-package company
-  :ensure t
-  :pin melpa
-  :config
-  (global-company-mode 1))
+;; Powerline
+(powerline-default-theme)
 
-;; https://github.com/purcell/exec-path-from-shell
-(use-package exec-path-from-shell
-  :ensure t
-  :pin melpa
-  :config
-  (when (memq window-system '(mac ns))
-    (exec-path-from-shell-initialize)))
+;; Projectile
+(projectile-global-mode 1)
 
-;; https://github.com/syohex/emacs-git-gutter
-(use-package git-gutter
-  :ensure t
-  :pin melpa
-  :config
-  (global-git-gutter-mode 1))
+;; Rainbow-delimiters
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; https://github.com/magit/magit
-(use-package magit
-  :ensure t
-  :pin melpa)
+;; Smex
+(global-set-key (kbd "M-x") 'smex)
 
-(use-package org
-  :ensure t
-  :pin org
-  :bind (("C-c l" . org-store-link)
-         ("C-c c" . org-capture)
-         ("C-c a" . org-agenda)
-         :map org-mode-map)
-  :mode ("\\.org$" . org-mode)
-  :init
-  (setq org-startup-folded 'content)
-  :config
-  (require 'ox-md nil t))
+;; Solarized-theme
+(load-theme 'solarized-dark t)
 
-;; https://github.com/larstvei/ox-gfm
-(use-package ox-gfm
-  :ensure t
-  :pin melpa)
+;; Sublimity
+(sublimity-mode 1)
 
-;; https://github.com/milkypostman/powerline
-(use-package powerline
-  :ensure t
-  :pin melpa-stable
-  :config
-  (powerline-default-theme))
+;; Undo-tree
+(global-undo-tree-mode 1)
 
-;; https://github.com/bbatsov/projectile
-(use-package projectile
-  :ensure t
-  :pin melpa
-  :config
-  (projectile-global-mode 1))
-
-;; https://github.com/Fanael/rainbow-delimiters
-(use-package rainbow-delimiters
-  :init
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-  :ensure t
-  :pin melpa)
-
-;; https://github.com/nonsequitur/smex
-(use-package smex
-  :ensure t
-  :pin melpa
-  :config
-  (global-set-key (kbd "M-x") 'smex))
-
-;; https://github.com/bbatsov/solarized-emacs
-(use-package solarized-theme
-  :ensure t
-  :pin melpa
-  :config
-  (load-theme 'solarized-dark t))
-
-;; https://github.com/zk-phi/sublimity
-(use-package sublimity
-  :ensure t
-  :pin melpa
-  :config
-  (sublimity-mode 1))
-
-;; https://melpa.org/#/undo-tree
-(use-package undo-tree
-  :ensure t
-  :pin melpa
-  :config
-  (global-undo-tree-mode 1))
+;;
+;; Default Emacs configuration
+;;
 
 ;; Keep any customize declarations separately. 
 (setq custom-file "~/.emacs.d/custom.el")
