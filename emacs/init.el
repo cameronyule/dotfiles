@@ -19,6 +19,12 @@
 ;; Git-gutter
 (global-git-gutter-mode 1)
 
+;; Markdown-mode
+(setq markdown-command "marked")
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
 ;; org
 ;; (global-set-key "\C-cl" 'org-store-link)
 ;; (global-set-key "\C-ca" 'org-agenda)
