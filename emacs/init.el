@@ -81,6 +81,11 @@
 ;; Start maximised
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; Easier navigation between windows
+;; https://www.emacswiki.org/emacs/WindMove
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 ;; Enable useful minor modes
 (global-linum-mode 1)
 (show-paren-mode 1)
