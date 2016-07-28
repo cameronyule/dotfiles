@@ -9,7 +9,6 @@ dockutil --add /Applications/AirMail\ 3.app
 dockutil --add /Applications/Calendar.app
 
 dockutil --add /usr/local/Cellar/emacs/25.1-rc1/Emacs.app
-dockutil --add /Applications/Atom.app
 dockutil --add /Applications/Utilities/Terminal.app
 dockutil --add /Applications/Dash.app
 dockutil --add /Applications/Pomodoro\ One.app
