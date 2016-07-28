@@ -102,6 +102,10 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; https://www.emacswiki.org/emacs/RevertBuffer
+;; https://www.emacswiki.org/emacs/AutoRevertMode
+(global-auto-revert-mode t)
+
 ;; Retain minibuffer history between sessions
 (savehist-mode 1)
 
