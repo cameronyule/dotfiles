@@ -30,6 +30,13 @@
 ;; Git-gutter
 (global-git-gutter-mode 1)
 
+;; Helm
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+;; Helm-projectile
+(helm-projectile-on)
+
 ;; js2-mode
 ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
@@ -61,7 +68,7 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; Smex
-(global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-x") 'smex)
 
 ;; Solarized-theme
 (load-theme 'solarized-dark t)
@@ -127,8 +134,8 @@
 (show-paren-mode 1)
 
 ;; https://www.emacswiki.org/emacs/InteractivelyDoThings
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
+;;(ido-mode 1)
+;; (setq ido-enable-flex-matching t)
 
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
