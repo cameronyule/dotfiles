@@ -4,7 +4,10 @@
 
 (depends-on "company")
 (depends-on "exec-path-from-shell")
+(depends-on "flycheck")
 (depends-on "git-gutter")
+(depends-on "js2-mode")
+(depends-on "json-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "markdown-preview-mode")
@@ -17,3 +20,4 @@
 (depends-on "solarized-theme")
 (depends-on "sublimity")
 (depends-on "undo-tree")
+(depends-on "web-mode")
