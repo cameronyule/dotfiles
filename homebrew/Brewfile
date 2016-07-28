@@ -24,6 +24,7 @@ brew 'ffmpeg'
 brew 'keybase'
 brew 'leiningen'
 brew 'mas', args: ['force-bottle']
+brew 'nmap'
 brew 'node'
 brew 'python'
 brew 'rbenv'
