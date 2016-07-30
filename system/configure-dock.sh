@@ -6,7 +6,7 @@ dockutil --remove all
 
 dockutil --add /Applications/Google\ Chrome.app
 dockutil --add /Applications/AirMail\ 3.app
-dockutil --add /Applications/Calendar.app
+dockutil --add /Applications/Fantastical\ 2.app
 
 dockutil --add /usr/local/Cellar/emacs/25.1-rc1/Emacs.app
 dockutil --add /Applications/Utilities/Terminal.app
