@@ -3,6 +3,7 @@
 (source org)
 
 (depends-on "company")
+(depends-on "editorconfig")
 (depends-on "exec-path-from-shell")
 (depends-on "git-gutter")
 (depends-on "helm")
