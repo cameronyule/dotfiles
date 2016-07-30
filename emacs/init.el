@@ -16,17 +16,6 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; Flycheck
-(global-flycheck-mode)
-;; (setq-default flycheck-temp-prefix ".flycheck")
-;; (setq-default flycheck-disabled-checkers
-;; 	      (append flycheck-disabled-checkers
-;; 		      '(javascript-jshint)))
-;; (setq-default flycheck-disabled-checkers
-;; 	      (append flycheck-disabled-checkers
-;; 		      '(json-jsonlist)))
-;; (flycheck-add-mode 'javascript-eslint 'web-mode)
-
 ;; Git-gutter
 (global-git-gutter-mode 1)
 
@@ -36,13 +25,6 @@
 
 ;; Helm-projectile
 (helm-projectile-on)
-
-;; js2-mode
-;; (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-;; (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
-
-;; json-mode
-;; (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
 ;; Markdown-mode
 (setq markdown-command "marked")
@@ -81,6 +63,7 @@
 
 ;; Web-mode
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss?\\'" . web-mode))

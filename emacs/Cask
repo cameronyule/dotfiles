@@ -4,12 +4,9 @@
 
 (depends-on "company")
 (depends-on "exec-path-from-shell")
-(depends-on "flycheck")
 (depends-on "git-gutter")
 (depends-on "helm")
 (depends-on "helm-projectile")
-(depends-on "js2-mode")
-(depends-on "json-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "markdown-preview-mode")
