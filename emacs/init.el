@@ -100,6 +100,10 @@
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 
+;; Set default font size
+;; The value is in 1/10pt, so 100 will give you 10pt, etc.
+(set-face-attribute 'default nil :height 140)
+
 ;; Start maximised
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -110,6 +114,7 @@
 
 ;; Enable useful minor modes
 (global-linum-mode 1)
+(global-hl-line-mode 1)
 (show-paren-mode 1)
 
 ;; Allow hash to be entered  
