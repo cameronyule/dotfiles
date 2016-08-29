@@ -20,6 +20,7 @@
   (exec-path-from-shell-initialize))
 
 ;; Git-gutter
+(require 'git-gutter-fringe)
 (global-git-gutter-mode 1)
 
 ;; Helm
