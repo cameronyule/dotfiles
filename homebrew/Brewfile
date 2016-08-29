@@ -19,17 +19,17 @@ brew 'dockutil'
 brew 'dos2unix'
 brew 'emacs', args: ['head', 'with-cocoa', 'with-gnutls', 'devel']
 brew 'emscripten', args: ['with-closure-compiler']
+brew 'ffmpeg', args: ['with-freetype']
 brew 'git'
 brew 'gnupg'
-brew 'ffmpeg', args: ['with-freetype']
 brew 'keybase'
 brew 'leiningen'
+brew 'librsvg'
 brew 'mas', args: ['force-bottle']
 brew 'nmap'
 brew 'node'
 brew 'python'
 brew 'rbenv'
-brew 'librsvg'
 brew 'rlwrap'
 brew 'shellcheck'
 brew 'sysdig'
@@ -67,8 +67,8 @@ cask 'istumbler'
 cask 'java'
 cask 'little-snitch'
 cask 'luxrender'
-cask 'omnifocus'
 cask 'meshlab'
+cask 'omnifocus'
 mas 'pocket', id: 568494494
 mas 'pomodoro-one', id: 907364780
 cask 'processing'
@@ -82,6 +82,7 @@ cask 'sonos'
 cask 'spectacle'
 cask 'spotify'
 cask 'steam'
+cask 'texturepacker'
 cask 'the-unarchiver'
 cask 'transmission'
 cask 'tripmode'
