@@ -2,8 +2,21 @@
 
 set -euf -o pipefail
 
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Caffeine.app", hidden:true}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Fantastical 2.app", hidden:true}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Dropbox.app", hidden:true}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Flux.app", hidden:true}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Spectacle.app", hidden:true}'
+function set_login_item() {
+    local apps="/Applications"
+    local path="$1"
+    local hidden="$2"
+
+    if [ -d "$apps/$path" ];
+    then
+	osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"$apps/$path\", hidden:$hidden}";
+    fi
+}
+
+set_login_item "Caffeine.app" "true"
+set_login_item "Fantastical 2.app" "true"
+set_login_item "Dropbox.app" "true"
+set_login_item "Flux.app" "true"
+set_login_item "Pomodoro One.app" "true"
+set_login_item "Slack.app" "true"
+set_login_item "Spectacle.app" "true"
