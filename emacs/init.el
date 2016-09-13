@@ -22,6 +22,8 @@
 ;; Git-gutter
 (require 'git-gutter-fringe)
 (global-git-gutter-mode 1)
+(custom-set-variables
+ '(git-gutter:update-interval 2))
 
 ;; Helm
 (helm-mode 1)
