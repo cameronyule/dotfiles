@@ -69,6 +69,7 @@ cask 'little-snitch'
 cask 'luxrender'
 cask 'meshlab'
 cask 'omnifocus'
+cask 'openoffice'
 mas 'pocket', id: 568494494
 mas 'pomodoro-one', id: 907364780
 cask 'processing'
@@ -92,4 +93,5 @@ cask 'virtualbox'
 cask 'vlc'
 cask 'vmware-fusion'
 cask 'vnc-viewer'
+mas 'xcode', id: 497799835
 cask 'xquartz'
