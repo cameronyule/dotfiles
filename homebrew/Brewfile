@@ -7,35 +7,22 @@ tap 'caskroom/versions'
 
 # Terminal
 
-brew 'ant'
-brew 'awscli'
 brew 'bash'
 brew 'bash-completion2'
 brew 'cask'
 brew 'coreutils'
-brew 'docker'
-brew 'docker-machine'
 brew 'dockutil'
-brew 'dos2unix'
 brew 'emacs', args: ['head', 'with-cocoa', 'with-gnutls', 'devel']
-brew 'emscripten', args: ['with-closure-compiler']
-brew 'ffmpeg', args: ['with-freetype']
 brew 'git'
 brew 'gnupg'
-brew 'keybase'
 brew 'leiningen'
 brew 'librsvg'
 brew 'mas', args: ['force-bottle']
-brew 'nmap'
 brew 'node'
 brew 'pandoc'
 brew 'python'
 brew 'rbenv'
-brew 'rlwrap'
-brew 'shellcheck'
-brew 'sysdig'
 brew 'tmux'
-brew 'trash'
 brew 'tree'
 brew 'xz'
 
