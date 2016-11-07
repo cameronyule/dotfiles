@@ -4,13 +4,14 @@ set -euf -o pipefail
 
 dockutil --remove all
 
-dockutil --add /Applications/Google\ Chrome.app
+dockutil --add ~/Applications/Google\ Chrome\ With\ Arguments.app
 dockutil --add /Applications/Fantastical\ 2.app
 
-dockutil --add /usr/local/Cellar/emacs/25.1-rc2/Emacs.app
+dockutil --add /Applications/Emacs.app
+dockutil --add /Applications/Atom.app
 dockutil --add /Applications/Utilities/Terminal.app
 dockutil --add /Applications/Dash.app
-dockutil --add /Applications/Pomodoro\ One.app
+dockutil --add /Applications/Tomato\ One.app
 dockutil --add /Applications/Slack.app
 
 dockutil --add /Applications/OmniFocus.app
