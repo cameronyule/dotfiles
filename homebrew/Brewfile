@@ -54,9 +54,10 @@ cask 'little-snitch'
 cask 'luxrender'
 cask 'meshlab'
 cask 'omnifocus'
+cask 'omnigraffle'
 cask 'openoffice'
 mas 'pocket', id: 568494494
-mas 'pomodoro-one', id: 907364780
+cask 'postman'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlstephen'
@@ -70,6 +71,7 @@ cask 'spotify'
 cask 'steam'
 cask 'texturepacker'
 cask 'the-unarchiver'
+mas 'tomato-one', id: 907364780
 cask 'transmission'
 cask 'tripmode'
 mas 'twitter', id: 409789998
