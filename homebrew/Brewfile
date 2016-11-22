@@ -57,6 +57,7 @@ cask 'microsoft-office'
 cask 'min'
 cask 'omnifocus'
 cask 'omnigraffle'
+mas 'pages', id: 409201541
 mas 'pocket', id: 568494494
 cask 'postman'
 cask 'qlcolorcode'
