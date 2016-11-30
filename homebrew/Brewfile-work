@@ -1,0 +1,17 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+tap 'homebrew/versions'
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+# Terminal
+
+brew 'mono'
+brew 'nuget'
+brew 'packer'
+
+# Mac Applications
+
+cask 'argouml'
+cask 'microsoft-office'

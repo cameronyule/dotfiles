@@ -1,0 +1,37 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+tap 'homebrew/versions'
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+# Terminal
+
+brew 'dockutil'
+brew 'leiningen'
+brew 'pandoc'
+
+# Mac Applications
+
+cask 'basictex'
+# cask 'blender'
+# cask 'cura'
+cask 'daisydisk'
+cask 'handbrake'
+# cask 'inkscape'
+cask 'istat-menus'
+# cask 'istumbler'
+cask 'little-snitch'
+# cask 'luxrender'
+# cask 'meshlab'
+cask 'microsoft-office'
+cask 'min'
+mas 'pages', id: 409201541
+mas 'pocket', id: 568494494
+cask 'steam'
+cask 'texturepacker'
+mas 'tomato-one', id: 907364780
+cask 'transmission'
+cask 'tripmode'
+mas 'twitter', id: 409789998
+cask 'vlc'
