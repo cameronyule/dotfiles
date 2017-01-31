@@ -4,5 +4,4 @@ editorconfig@1.4.1
 markdown-folder@0.5.0
 markdown-writer@2.6.2
 pretty-json@1.6.1
-
-
+language-terraform
