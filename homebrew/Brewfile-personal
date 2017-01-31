@@ -33,6 +33,5 @@ cask 'steam'
 cask 'texturepacker'
 mas 'tomato-one', id: 907364780
 cask 'transmission'
-cask 'tripmode'
 mas 'twitter', id: 409789998
 cask 'vlc'
