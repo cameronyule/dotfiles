@@ -12,14 +12,19 @@ brew 'graphviz'
 brew 'mono'
 brew 'nuget'
 brew 'packer'
+brew 'python3'
 brew 'terraform'
+brew 'yarn'
 
 # Mac Applications
 
 cask 'argouml'
+mas 'bear', id: 1091189122
 cask 'caskroom/versions/java6'
 cask 'charles'
 cask 'chefdk'
 cask 'microsoft-office'
+mas 'microsoft-remote-desktop', id: 715768417
 cask 'postbox'
+cask 'tunnelblick'
 cask 'zeplin'
