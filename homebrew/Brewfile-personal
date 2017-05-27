@@ -17,7 +17,6 @@ cask 'handbrake'
 cask 'istat-menus'
 cask 'little-snitch'
 cask 'steam'
-cask 'texturepacker'
 mas 'tomato-one', id: 907364780
 cask 'transmission'
 cask 'vlc'
