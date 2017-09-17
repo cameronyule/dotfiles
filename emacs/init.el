@@ -10,7 +10,7 @@
 ;;
 
 ;; Company
-(global-company-mode 1)
+;;(global-company-mode 1)
 
 ;; Editorconfig
 (editorconfig-mode 1)

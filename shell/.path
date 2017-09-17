@@ -1,3 +1,4 @@
 # rbenv
 export PATH="${HOME}/.rbenv/shims:${PATH}"
 export PATH="/Applications/Emacs.app/Contents/MacOS:${PATH}"
+export PATH="/usr/local/sbin:${PATH}"

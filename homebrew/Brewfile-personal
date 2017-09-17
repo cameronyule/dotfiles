@@ -2,9 +2,11 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'caskroom/cask'
+tap 'caskroom/versions'
 
 # Terminal
 
+brew 'awscli'
 brew 'dialog'
 brew 'dockutil'
 brew 'leiningen'
@@ -13,6 +15,7 @@ brew 'leiningen'
 
 cask 'banktivity'
 cask 'daisydisk'
+cask 'firefox'
 cask 'handbrake'
 cask 'istat-menus'
 cask 'little-snitch'
