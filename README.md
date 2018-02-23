@@ -11,10 +11,7 @@ I haven't written a fully automated install script, so installation is currently
 ### Base System
 
 ```bash
-./system/software-update.sh
-./system/enable-filevault.sh
 ./system/configure-defaults.sh
-./system/set-umask.sh
 ```
 
 ### Development Environment
@@ -27,8 +24,7 @@ I haven't written a fully automated install script, so installation is currently
 ### Applications
 
 ```bash
-brew bundle --file=homebrew/Brewfile
-./system/configure-login-items.sh
+brew bundle --file=homebrew/Brewfile-base
 ./system/configure-dock.sh
 ```
 
@@ -44,12 +40,3 @@ brew bundle --file=homebrew/Brewfile
 ./emacs/install.sh
 ```
 
-## Todo
-
-* Base system
-  * Configure Energy Saver preferences.
-  * Configure Desktop & Screen Saver preferences.
-* Terminal setup
-  * Configure custom prompt.
-  * Evaluate other shells (i.e. [zsh](http://www.zsh.org/)).
-* Automated install script.

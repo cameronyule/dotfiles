@@ -26,10 +26,3 @@ done
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
   . $(brew --prefix)/share/bash-completion/bash_completion
 fi
-
-if [ -f $(brew --prefix)/Cellar/rbenv/1.0.0/completions/rbenv.bash ]; then
-    . $(brew --prefix)/Cellar/rbenv/1.0.0/completions/rbenv.bash
-fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm

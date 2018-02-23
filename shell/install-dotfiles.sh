@@ -8,7 +8,6 @@ git pull origin master;
 
 function doIt() {
   rsync --exclude "install-dotfiles.sh" \
-    --exclude "Solarized Dark ansi.terminal" \
     --exclude "configure-bash.sh" \
     -avh --no-perms . ~;
   source ~/.bash_profile;

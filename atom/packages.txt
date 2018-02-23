@@ -1,8 +1,0 @@
-Parinfer
-Zen
-editorconfig
-markdown-folder
-markdown-writer
-pretty-json
-language-terraform
-nuclide

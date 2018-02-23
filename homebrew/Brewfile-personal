@@ -2,24 +2,20 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'caskroom/cask'
-tap 'caskroom/versions'
+tap 'caskroom/drivers'
 
 # Terminal
 
-brew 'awscli'
-brew 'dialog'
 brew 'dockutil'
-brew 'leiningen'
+brew 'python'
+brew 'rbenv'
 
 # Mac Applications
 
 cask 'banktivity'
 cask 'daisydisk'
-cask 'firefox'
-cask 'handbrake'
-cask 'istat-menus'
-cask 'little-snitch'
-cask 'steam'
-mas 'tomato-one', id: 907364780
+cask 'fantastical'
+cask 'sonos'
 cask 'transmission'
 cask 'vlc'
+cask 'vnc-viewer'

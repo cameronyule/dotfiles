@@ -5,20 +5,6 @@ tap 'caskroom/cask'
 
 # Terminal
 
-brew 'dos2unix'
-brew 'graphviz'
-brew 'mono'
-brew 'nuget'
-brew 'packer'
-brew 'terraform'
 
 # Mac Applications
 
-cask 'argouml'
-cask 'caskroom/versions/java6'
-cask 'charles'
-cask 'chefdk'
-cask 'microsoft-office'
-mas 'microsoft-remote-desktop', id: 715768417
-cask 'postbox'
-cask 'tunnelblick'
