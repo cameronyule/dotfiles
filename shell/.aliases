@@ -1,4 +1,6 @@
 # Emacs
+alias ed="launchctl load ~/Library/LaunchAgents/org.gnu.emacs.daemon.plist"
+alias eds="launchctl unload ~/Library/LaunchAgents/org.gnu.emacs.daemon.plist"
 alias ec="emacsclient -t -a 'emacs -nw'"
 alias eg="emacsclient -c -a emacs &"
 
