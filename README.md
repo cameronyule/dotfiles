@@ -36,7 +36,4 @@ brew bundle --file=homebrew/Brewfile-base
 ```
 ### Emacs
 
-```bash
-./emacs/install.sh
-```
-
+See the README file in the `emacs/` directory.
