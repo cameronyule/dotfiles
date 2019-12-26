@@ -1,7 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 
 # Terminal
 
@@ -21,13 +21,12 @@ cask 'caffeine'
 cask 'dropbox'
 cask 'emacs'
 cask 'firefox'
-cask 'flux'
-cask 'java'
-cask 'omnifocus'
+cask 'google-chrome'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-json'
 cask 'spectacle'
 cask 'spotify'
-cask 'the-unarchiver'
+cask 'spotify-notifications'
+

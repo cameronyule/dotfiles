@@ -1,8 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'caskroom/cask'
-tap 'caskroom/drivers'
+tap 'homebrew/cask'
 
 # Terminal
 
@@ -12,9 +11,10 @@ brew 'rbenv'
 
 # Mac Applications
 
-cask 'banktivity'
 cask 'daisydisk'
 cask 'fantastical'
+cask 'flux'
+cask 'omnifocus'
 cask 'sonos'
 cask 'transmission'
 cask 'vlc'
