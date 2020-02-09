@@ -7,12 +7,9 @@ tap 'homebrew/cask'
 
 brew 'dockutil'
 brew 'python'
-brew 'rbenv'
 
 # Mac Applications
 
-cask 'daisydisk'
-cask 'fantastical'
 cask 'flux'
 cask 'omnifocus'
 cask 'sonos'

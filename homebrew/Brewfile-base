@@ -25,7 +25,6 @@ cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-json'
-cask 'spectacle'
 cask 'spotify'
 cask 'spotify-notifications'
-
+cask 'rectangle'
