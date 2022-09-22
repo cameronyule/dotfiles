@@ -5,13 +5,10 @@ tap 'homebrew/cask'
 
 # Terminal
 
-brew 'dockutil'
-brew 'python'
 
 # Mac Applications
 
 cask 'flux'
-cask 'omnifocus'
 cask 'sonos'
 cask 'transmission'
 cask 'vlc'
