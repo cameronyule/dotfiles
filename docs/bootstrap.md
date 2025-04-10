@@ -38,7 +38,7 @@ sudo shutdown -r now
 
 ## 5. Setup Nix Darwin
 
-We're using [Nix Flakes](https://zero-to-nix.com/concepts/flakes/), which allow us to deterministically manage our dependencies via `flake.lock` files. Here we create a new Nix Flake based on the [Nix Darwin template](https://github.com/nix-darwin/nix-darwin#getting-started).
+We're using [Nix Flakes](https://zero-to-nix.com/concepts/flakes/), which allow us to deterministically manage our dependencies via `flake.lock` files. Here we create a new Nix Flake based on the [Nix Darwin template](https://github.com/nix-darwin/nix-darwin?tab=readme-ov-file#step-1-creating-flakenix).
 
 ``` shell
 nix flake init -t nix-darwin
@@ -52,9 +52,9 @@ Set the current machine's hostname in the appropriate place.
 sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
 ```
 
-### 5.2. Bootstrap nix-darwin
+### 5.2. Install nix-darwin
 
-Execute nix-darwin for the first time.
+Ensure nix-darwin is [available in our PATH](https://github.com/nix-darwin/nix-darwin?tab=readme-ov-file#step-2-installing-nix-darwin).
 
 ``` shell
 nix run nix-darwin -- switch --flake .

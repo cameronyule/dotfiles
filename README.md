@@ -18,7 +18,7 @@ See [bootstrap](docs/bootstrap.md) for further information.
 
 ### 1. Install Nix
 
-I use the [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#installation), but you can also use the [official installer](https://nixos.org/download/) as long as [flakes are enabled](https://nixos.wiki/wiki/Flakes#Other_Distros.2C_with_Home-Manager).
+I use the [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#installation), but the [official installer](https://nixos.org/download/) can also be used as long as [flakes are enabled](https://nixos.wiki/wiki/Flakes#Other_Distros.2C_with_Home-Manager).
 
 <details>
 <summary>Install Command</summary>
@@ -29,7 +29,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 </details>
 
 ### 2. Install Homebrew
-We install Homebrew to make it available to nix-darwin, which will manage installing any [Homebrew Casks](https://github.com/Homebrew/homebrew-cask) on our behalf. Note that Homebrew will also [install the Xcode Command Line Tools](https://github.com/Homebrew/install/commit/493954aba6c4dfc37f2567eb7f67874c7ea51b11) during installation.
+We install Homebrew to make it available to nix-darwin, which will manage installing any [Homebrew Casks](https://github.com/Homebrew/homebrew-cask) on our behalf. Homebrew will automatically [install the Xcode Command Line Tools](https://github.com/Homebrew/install/commit/493954aba6c4dfc37f2567eb7f67874c7ea51b11) during installation.
 
 <details>
 <summary>Install Command</summary>
@@ -41,15 +41,23 @@ We install Homebrew to make it available to nix-darwin, which will manage instal
 
 ## Usage
 
-### Apply Configuration
+### Bootstrap
 
-Apply the configuration directly from GitHub:
+Apply the configuration for the first time directly from GitHub:
 
 ```shell
-darwin-rebuild switch --flake github:cameronyule/dotfiles
+nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake github:cameronyule/dotfiles
 ```
 
-Apply the configuration from a local working copy:
+Apply the configuration for the first time from a local working copy:
+
+```shell
+nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake .
+```
+
+### Apply Changes
+
+After modifying the configuration, apply the changes from a local working copy:
 
 ```shell
 darwin-rebuild switch --flake .
@@ -69,7 +77,7 @@ List all previous states:
 darwin-rebuild --list-generations
 ```
 
-Switch to a specific previous state, where `x` is your desired state identifier:
+Switch to a specific previous state, where `x` is the desired state identifier:
 
 ``` shell
 darwin-rebuild switch --switch-generation x
@@ -81,7 +89,7 @@ darwin-rebuild switch --switch-generation x
 2. Uninstall [Homebrew](https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew).
 3. Uninstall [Nix](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#uninstalling).
 
-NB: This will not undo any of the configuration changes that have been applied to your system(s). See [rollback](#rollback) above for more information on reverting state prior to uninstalling.
+NB: This will not undo any of the configuration changes that have been applied to the system(s) under management. See [rollback](#rollback) for reverting state prior to uninstalling.
 
 ## Development
 
