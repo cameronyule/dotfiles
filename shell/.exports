@@ -1,3 +1,0 @@
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t -a 'emacs -nw'"   # $EDITOR opens in terminal
-export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode

@@ -1,39 +1,98 @@
 # Dotfiles
 
-A semi-automated setup of my macOS environment.
+These are my [dotfiles](https://dotfiles.github.io), which allow me to codify, automate, and reliably reproduce the configuration of my systems. They use [Nix](https://nixos.org), [nix-darwin](https://github.com/nix-darwin/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
 
-Partially based on Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles).
+## Organisation
+
+| File                                            | Purpose                                     |
+| :---------------------------------------------- | :------------------------------------------ |
+| [flake.nix](flake.nix)                          | The entrypoint to my dotfiles.              |
+| [modules/nix-core.nix](modules/nix-core.nix)    | Configuration of Nix itself.                |
+| [modules/system.nix](modules/system.nix)        | macOS system configuration.                 |
+| [modules/packages.nix](modules/packages.nix)    | Software (package and GUI) installation.    |
+| [modules/home.nix](modules/home.nix)            | Home Manager configuration; dotfiles.       |
+
+## Prerequisites
+
+See [bootstrap](docs/bootstrap.md) for further information.
+
+### 1. Install Nix
+
+I use the [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#installation), but you can also use the [official installer](https://nixos.org/download/) as long as [flakes are enabled](https://nixos.wiki/wiki/Flakes#Other_Distros.2C_with_Home-Manager).
+
+<details>
+<summary>Install Command</summary>
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+</details>
+
+### 2. Install Homebrew
+We install Homebrew to make it available to nix-darwin, which will manage installing any [Homebrew Casks](https://github.com/Homebrew/homebrew-cask) on our behalf. Note that Homebrew will also [install the Xcode Command Line Tools](https://github.com/Homebrew/install/commit/493954aba6c4dfc37f2567eb7f67874c7ea51b11) during installation.
+
+<details>
+<summary>Install Command</summary>
+
+ ```shell
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+</details>
 
 ## Usage
 
-I haven't written a fully automated install script, so installation is currently a multi-step process.
+### Apply Configuration
 
-### Base System
+Apply the configuration directly from GitHub:
 
-```bash
-./system/configure-defaults.sh
+```shell
+darwin-rebuild switch --flake github:cameronyule/dotfiles
 ```
 
-### Development Environment
+Apply the configuration from a local working copy:
 
-```bash
-./xcode/install-clt.sh
-./homebrew/install.sh
+```shell
+darwin-rebuild switch --flake .
 ```
 
-### Applications
+### Rollback
 
-```bash
-brew bundle --file=homebrew/Brewfile-base
-./system/configure-dock.sh
+Rollback to the previous state:
+
+```shell
+darwin-rebuild switch --rollback
 ```
 
-### Dotfiles
+List all previous states:
 
-```bash
-./shell/install-dotfiles.sh
-./shell/configure-bash.sh
+```shell
+darwin-rebuild --list-generations
 ```
-### Emacs
 
-See the README file in the `emacs/` directory.
+Switch to a specific previous state, where `x` is your desired state identifier:
+
+``` shell
+darwin-rebuild switch --switch-generation x
+```
+
+### Uninstall
+
+1. Uninstall [nix-darwin](https://github.com/nix-darwin/nix-darwin?tab=readme-ov-file#uninstalling).
+2. Uninstall [Homebrew](https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew).
+3. Uninstall [Nix](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#uninstalling).
+
+NB: This will not undo any of the configuration changes that have been applied to your system(s). See [rollback](#rollback) above for more information on reverting state prior to uninstalling.
+
+## Development
+
+### Roadmap
+
+See [roadmap](docs/roadmap.md) for further information.
+
+### Linting
+
+Run the [statix](https://github.com/oppiliappan/statix) linter in a local working copy:
+
+```shell
+nix run nixpkgs#statix check .
+```
