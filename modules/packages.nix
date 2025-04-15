@@ -5,6 +5,7 @@
   environment.systemPackages = [
     pkgs.emacs
     pkgs.pandoc
+    pkgs.signal-desktop
     pkgs.utm
   ];
 
@@ -26,5 +27,10 @@
       "spotify"
       "zoom"
     ];
+
+    masApps = {
+      WhatsApp = 310633997;
+    };
+
   };
 }
