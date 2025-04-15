@@ -4,9 +4,16 @@
   # Install nix packages.
   environment.systemPackages = [
     pkgs.emacs
+    pkgs.fd
     pkgs.pandoc
     pkgs.signal-desktop
     pkgs.utm
+  ];
+
+  fonts.packages = with pkgs; [
+    # https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
+    # Required by https://starship.rs/guide/
+    nerd-fonts.fira-code
   ];
 
   # Use Homebrew to install GUI apps.

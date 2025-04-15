@@ -53,3 +53,7 @@ The keyboard I use - a [Drop CTRL](https://drop.com/buy/drop-ctrl-mechanical-key
 * [Remapping Keys in macOS](https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
 * [Example remapping keys with `hidutil`](https://github.com/ghostty-org/ghostty/discussions/3493#discussioncomment-11678819)
 * [Example remapping keys with `hidutil` for a specific keyboard](https://github.com/LnL7/nix-darwin/issues/905#issuecomment-2340195913)
+
+## Terminal
+
+* [Terminal colours are tricky](https://jvns.ca/blog/2024/10/01/terminal-colours/)

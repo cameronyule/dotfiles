@@ -14,9 +14,12 @@
   * Secrets management (SSH keys, SSH agent, etc).
   * Emacs Configuration.
     * E.g., [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) installations.
-  * Terminal Configuration.
-    * `zsh` configuration.
-    * `fzf` or `sk` for fuzzy searching.
+  * ~~Terminal Configuration.~~
+    * ~~Application (e.g. iTerm).~~
+    * ~~Theme (e.g. [Gogh](https://github.com/Gogh-Co/Gogh), [Catppuccin](https://github.com/catppuccin/nix) ([usage](https://github.com/Lalit64/dotfiles/blob/main/home/lalit/modules/home.nix)), [iTerm2 Color Schemes](https://iterm2colorschemes.com), [Zenburn](https://kippura.org/zenburnpage/).~~
+    * ~~Fonts.~~
+    * ~~`zsh` configuration.~~
+    * ~~`fzf` or `sk` for fuzzy searching.~~
   * Evaluate [Nix flakes](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10), [Direnv](https://nixos.asia/en/direnv), [Devenv](https://devenv.sh/), [Flox](https://github.com/flox/flox), and others.
     * Evaluate [building containers with Nix](https://xeiaso.net/talks/2024/nix-docker-build/).
   * Xcode integration with Nix.
