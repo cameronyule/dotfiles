@@ -28,7 +28,7 @@
     enable = true;
 
     casks = [
-      "1password"
+      "1password" # https://github.com/NixOS/nixpkgs/issues/254944
       "dropbox"
       "firefox"
       "spotify"

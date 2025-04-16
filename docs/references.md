@@ -30,6 +30,8 @@ nix-darwin "aims to bring the convenience of a declarative system approach to ma
 * [gamedolphin/system](https://github.com/gamedolphin/system)
 * [alarsyo/nixos-config](https://git.alarsyo.net/alarsyo/nixos-config)
 * [srid/nixos-config](https://github.com/srid/nixos-config)
+* [reckenrode/nixos-configs](https://github.com/reckenrode/nixos-configs)
+* [genebean/dots](https://github.com/genebean/dots)
 
 ## Home Manager
 
@@ -37,6 +39,8 @@ A system for managing user environments in coordination with Nix. My primary int
 
 * [Home Manager](https://github.com/nix-community/home-manager)
 * [Managing dotfiles on macOS with Nix](https://davi.sh/blog/2024/02/nix-home-manager/)
+* [Tidying up your $HOME with Nix](https://juliu.is/tidying-your-home-with-nix/)
+* [Home-Manager Dark Mode Toggle](https://ryan.himmelwright.net/post/home-manager-dark-mode/)
 
 ## Emacs
 
@@ -45,6 +49,12 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 * [nixpkgs 24.11 definition for Emacs](https://github.com/NixOS/nixpkgs/blob/nixos-24.11/pkgs/applications/editors/emacs/sources.nix)
 * [Reddit comment explaining the situation for graphical Emacs on macOS](https://www.reddit.com/r/emacs/comments/1heyuq4/comment/m27fo42/)
 * [How to view what settings Emacs was compiled with at runtime](https://emacs.stackexchange.com/a/35512)
+
+### LSP
+
+* [lsp-mode](https://github.com/emacs-lsp/lsp-mode/)
+  * [nixd](https://github.com/nix-community/nixd)
+  * [lsp-mode nix.el](https://github.com/emacs-lsp/lsp-mode/blob/d35aa757a3afde7a62efd67e2b84a9d8324951c0/clients/lsp-nix.el)
 
 ## Keyboard
 

@@ -9,9 +9,11 @@
   * Window Management.
     * Investigate the [tiling window manager in macOS Sequoia](https://support.apple.com/en-gb/guide/mac-help/mchlef287e5d/mac) as an alternative to [Rectangle](https://rectangleapp.com).
     * Investigate [FlashSpace](https://github.com/wojciech-kulik/FlashSpace) as an alternative to [macOS Spaces](https://support.apple.com/en-gb/guide/mac-help/mh14112/mac).
-  * Apply keyboard overrides only to my specific keyboard.
+  * Keyboard Configuration
+    * Apply keyboard overrides only to my specific keyboard.
 * Development Environment.
   * Secrets management (SSH keys, SSH agent, etc).
+    * [1Password Integration](https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client), [Example 1P/zsh integration](https://github.com/srid/nixos-config/blob/master/modules/home/all/zsh.nix)
   * Emacs Configuration.
     * E.g., [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) installations.
   * ~~Terminal Configuration.~~
