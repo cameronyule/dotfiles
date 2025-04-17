@@ -85,6 +85,11 @@
         #   "Default Window Settings" = "Basic";
         #   "Startup Window Settings" = "Basic";
         # };
+
+        "com.knollsoft.Rectangle" = {
+          "gapSize" = 15;
+          "launchOnLogin" = 1;
+        };
       };
     };
 

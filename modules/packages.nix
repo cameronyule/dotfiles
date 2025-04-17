@@ -6,6 +6,7 @@
     emacs
     fd
     pandoc
+    rectangle
     signal-desktop
     utm
   ];
