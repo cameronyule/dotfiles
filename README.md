@@ -55,6 +55,12 @@ Apply the configuration for the first time from a local working copy:
 nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake .
 ```
 
+#### Post-Bootstrap Configuration
+
+* 1Password
+  * [Enable the 1Password SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent)
+  * [Enable integration with the 1Password CLI](https://developer.1password.com/docs/cli/get-started#step-2-turn-on-the-1password-desktop-app-integration)
+
 ### Apply Changes
 
 After modifying the configuration, apply the changes from a local working copy:

@@ -27,8 +27,10 @@
 
     enable = true;
 
+    # TODO Migrate to Nix packages where possible. Casks are not pinned.
     casks = [
       "1password" # https://github.com/NixOS/nixpkgs/issues/254944
+      "1password-cli"
       "dropbox"
       "firefox"
       "spotify"
@@ -36,6 +38,7 @@
     ];
 
     masApps = {
+      "1Password for Safari" = 1569813296;
       WhatsApp = 310633997;
     };
 
