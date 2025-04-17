@@ -9,6 +9,7 @@
     rectangle
     signal-desktop
     utm
+    zotero
   ];
 
   fonts.packages = with pkgs; [
