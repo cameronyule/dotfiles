@@ -2,12 +2,12 @@
 
 {
   # Install nix packages.
-  environment.systemPackages = [
-    pkgs.emacs
-    pkgs.fd
-    pkgs.pandoc
-    pkgs.signal-desktop
-    pkgs.utm
+  environment.systemPackages = with pkgs; [
+    emacs
+    fd
+    pandoc
+    signal-desktop
+    utm
   ];
 
   fonts.packages = with pkgs; [
