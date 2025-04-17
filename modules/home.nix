@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 
 let
-  prelude = pkgs.fetchFromGitHub {
-    owner = "bbatsov";
-    repo = "prelude";
-    rev = "799c71f39d061145a7d01d6305bab5071caf71e1";
-    hash = "sha256-jrWjitMKJG2W3nTzgeTdSuPe3uMcsy3V7RbEV9qBffE=";
-  };
+  # prelude = pkgs.fetchFromGitHub {
+  #   owner = "bbatsov";
+  #   repo = "prelude";
+  #   rev = "799c71f39d061145a7d01d6305bab5071caf71e1";
+  #   hash = "sha256-jrWjitMKJG2W3nTzgeTdSuPe3uMcsy3V7RbEV9qBffE=";
+  # };
   iterm-themes = pkgs.fetchFromGitHub {
     owner = "mbadolato";
     repo = "iTerm2-Color-Schemes";
@@ -27,33 +27,33 @@ in {
     stateVersion = "24.11"; # Please read the comment before changing.
 
     file = {
-      "${config.home.homeDirectory}/.emacs.d" = {
-        source = prelude;
+      # "${config.home.homeDirectory}/.emacs.d" = {
+      #   source = prelude;
 
-        # The cloned Prelude repository will live in the Nix store, which is immutable. To allow
-        # mutating the configuration, we recursively symlink the directories and files from the
-        # store, but ensure that the `emacs.d` directory itself is writable and mutable.
-        # https://nix-community.github.io/home-manager/options.xhtml#opt-home.file._name_.recursive
-        recursive = true;
-      };
+      #   # The cloned Prelude repository will live in the Nix store, which is immutable. To allow
+      #   # mutating the configuration, we recursively symlink the directories and files from the
+      #   # store, but ensure that the `emacs.d` directory itself is writable and mutable.
+      #   # https://nix-community.github.io/home-manager/options.xhtml#opt-home.file._name_.recursive
+      #   recursive = true;
+      # };
 
-      # https://prelude.emacsredux.com/en/latest/installation/#pinning-packages
-      "${config.home.homeDirectory}/.emacs.d/prelude-pinned-packages.el".source = prelude + "/sample/prelude-pinned-packages.el";
+      # # https://prelude.emacsredux.com/en/latest/installation/#pinning-packages
+      # "${config.home.homeDirectory}/.emacs.d/prelude-pinned-packages.el".source = prelude + "/sample/prelude-pinned-packages.el";
 
-      # https://prelude.emacsredux.com/en/latest/configuration/#personalizing
-      "${config.home.homeDirectory}/.emacs.d/personal/prelude-modules.el".source = prelude + "/sample/prelude-modules.el";
-      "${config.home.homeDirectory}/.emacs.d/personal/config.el" = {
-        text = ''
-          (prelude-require-package 'nix-mode)
-          (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
-        '';
-      };
+      # # https://prelude.emacsredux.com/en/latest/configuration/#personalizing
+      # "${config.home.homeDirectory}/.emacs.d/personal/prelude-modules.el".source = prelude + "/sample/prelude-modules.el";
+      # "${config.home.homeDirectory}/.emacs.d/personal/config.el" = {
+      #   text = ''
+      #     (prelude-require-package 'nix-mode)
+      #     (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
+      #   '';
+      # };
 
       # TODO Automate Terminal.app consuming a theme (e.g. Zenburn).
       # plutil -convert binary1 -o Zenburn.plist Zenburn.terminal
       # https://github.com/gilacost/dot-files/blob/a1d15dd89ccc14285cc96a64b2ed16aa97342056/darwin-configuration.nix#L92
       # TODO Automate setting theme font (e.g. to Fira Code Nerd Font Mono)
-      "${config.xdg.configHome}/terminal/iTerm2-Color-Schemes".source = iterm-themes;
+      "${config.xdg.cacheHome}/terminal/iTerm2-Color-Schemes".source = iterm-themes;
     };
   };
 
