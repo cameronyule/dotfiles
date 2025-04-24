@@ -3,10 +3,18 @@
 {
   # Install nix packages.
   environment.systemPackages = with pkgs; [
+    cmake
+    editorconfig-core-c
     emacs
     fd
+    fontconfig
+    libvterm-neovim
+    nixfmt-rfc-style
+    nodejs_23
     pandoc
     rectangle
+    ripgrep
+    shellcheck
     signal-desktop
     utm
     zotero
@@ -16,6 +24,7 @@
     # https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
     # Required by https://starship.rs/guide/
     nerd-fonts.fira-code
+    nerd-fonts.symbols-only
   ];
 
   # Use Homebrew to install GUI apps.

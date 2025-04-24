@@ -50,11 +50,26 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 * [Reddit comment explaining the situation for graphical Emacs on macOS](https://www.reddit.com/r/emacs/comments/1heyuq4/comment/m27fo42/)
 * [How to view what settings Emacs was compiled with at runtime](https://emacs.stackexchange.com/a/35512)
 
+### Doom
+
+* [Doom Emacs Documentation](https://docs.doomemacs.org/latest/)
+* [Getting Started with Doom Emacs](https://aquabeam.me/tech/doom_emacs_intro/)
+* [ruivieira configuration](https://ruivieira.dev/doom-emacs.html)
+* [zzamboni configuration](https://zzamboni.org/post/my-doom-emacs-configuration-with-commentary/)
+* [justin.vc configuration](https://notes.justin.vc/config)
+* [A handbook for the Doom Emacs initiate](https://valerioviperino.me/doom-emacs-handbook/)
+
 ### LSP
 
 * [lsp-mode](https://github.com/emacs-lsp/lsp-mode/)
   * [nixd](https://github.com/nix-community/nixd)
   * [lsp-mode nix.el](https://github.com/emacs-lsp/lsp-mode/blob/d35aa757a3afde7a62efd67e2b84a9d8324951c0/clients/lsp-nix.el)
+
+### Roam
+
+* [org-roam](https://www.orgroam.com)
+* [How I Take Notes with Org-roam](https://jethrokuan.github.io/org-roam-guide/)
+* [Build a Second Brain in Emacs with Org Roam](https://systemcrafters.net/build-a-second-brain-in-emacs/getting-started-with-org-roam/pp)
 
 ## Keyboard
 
