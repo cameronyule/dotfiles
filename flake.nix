@@ -22,14 +22,14 @@
       "nexus" = nix-darwin.lib.darwinSystem {
         modules = [
           ./modules/nix-core.nix
-          ./modules/system.nix
-          ./modules/packages.nix
+          ./modules/darwin
+          ./modules/darwin/packages.nix
           home-manager.darwinModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.cameronyule = import ./modules/home.nix;
+              users.cameronyule = import ./modules/home;
             };
           }
         ];

@@ -4,13 +4,17 @@ These are my [dotfiles](https://dotfiles.github.io), which allow me to codify, a
 
 ## Organisation
 
-| File                                            | Purpose                                     |
-| :---------------------------------------------- | :------------------------------------------ |
-| [flake.nix](flake.nix)                          | The entrypoint to my dotfiles.              |
-| [modules/nix-core.nix](modules/nix-core.nix)    | Configuration of Nix itself.                |
-| [modules/system.nix](modules/system.nix)        | macOS system configuration.                 |
-| [modules/packages.nix](modules/packages.nix)    | Software (package and GUI) installation.    |
-| [modules/home.nix](modules/home.nix)            | Home Manager configuration; dotfiles.       |
+| File                                                       | Purpose                                     |
+| :--------------------------------------------------------- | :------------------------------------------ |
+| [flake.nix](flake.nix)                                     | The entrypoint to my dotfiles.              |
+| [modules/nix-core.nix](modules/nix-core.nix)               | Configuration of Nix.                       |
+| [modules/darwin](modules/darwin/default.nix)               | macOS configuration.                        |
+| [modules/darwin/packages.nix](modules/darwin/packages.nix) | App installation.                           |
+| [modules/home](modules/home/default.nix)                   | Home Manager initialisation.                |
+| [modules/home/emacs.nix](modules/home/emacs.nix)           | Doom Emacs configuration.                   |
+| [modules/home/terminal.nix](modules/home/terminal.nix)     | ZSH, Starship, fzf, bat, etc.               |
+| [modules/home/git.nix](modules/home/git.nix)               | Git configuration.                          |
+| [modules/home/ssh.nix](modules/home/ssh.nix)               | SSH configuration.                          |
 
 ## Prerequisites
 

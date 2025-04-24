@@ -3,18 +3,7 @@
 {
   # Install nix packages.
   environment.systemPackages = with pkgs; [
-    cmake
-    editorconfig-core-c
-    emacs
-    fd
-    fontconfig
-    libvterm-neovim
-    nixfmt-rfc-style
-    nodejs_23
-    pandoc
     rectangle
-    ripgrep
-    shellcheck
     signal-desktop
     utm
     zotero
@@ -35,7 +24,6 @@
     # NB: This does not install Homebrew, which means there is a manual install step.
     # TODO: Investigate https://github.com/zhaofengli/nix-homebrew
     # E.g., https://github.com/dustinlyons/nixos-config/blob/91be1deae7e0b9e074256838a3a85899c21f09b5/flake.nix#L11
-
     enable = true;
 
     # TODO Migrate to Nix packages where possible. Casks are not pinned.

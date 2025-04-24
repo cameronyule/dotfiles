@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 
 {
+  # Entrypoint for nix-darwin configuration.
+  # https://nix-darwin.github.io/nix-darwin/manual/
+
   # Declare the user that will be running `nix-darwin`.
   users.users.cameronyule = {
     name = "cameronyule";
