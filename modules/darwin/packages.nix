@@ -3,6 +3,7 @@
 {
   # Install nix packages.
   environment.systemPackages = with pkgs; [
+    maccy
     rectangle
     signal-desktop
     utm
@@ -32,6 +33,7 @@
       "1password-cli"
       "dropbox"
       "firefox"
+      "lookaway"
       "spotify"
       "zoom"
     ];
