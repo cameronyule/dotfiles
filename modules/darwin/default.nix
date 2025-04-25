@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, pkgs-master, inputs, ... }:
 
 {
   # Entrypoint for nix-darwin configuration.
@@ -39,7 +39,7 @@
             app = "/System/Cryptexes/App/System/Applications/Safari.app";
           }
           {
-            app = "${pkgs.emacs}/Applications/Emacs.app";
+            app = "${pkgs-master.emacs}/Applications/Emacs.app";
           }
           {
             app = "/System/Applications/Utilities/Terminal.app";

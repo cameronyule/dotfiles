@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-master, ... }:
 {
   # Install Emacs
   programs.emacs = {
     enable = true;
+    package = pkgs-master.emacs;
   };
 
   home = {

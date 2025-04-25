@@ -67,7 +67,19 @@ nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake .
 
 ### Apply Changes
 
-After modifying the configuration, apply the changes from a local working copy:
+After modifying the configuration, first validate:
+
+``` shell
+darwin-rebuild check --flake .
+```
+
+Optionally test your changes in a temporary session:
+
+``` shell
+darwin-rebuild test --flake .
+```
+
+And finally apply your configuration to your system:
 
 ```shell
 darwin-rebuild switch --flake .
