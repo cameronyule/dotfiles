@@ -1,4 +1,9 @@
-{ config, pkgs, pkgs-master,... }:
+{
+  config,
+  pkgs,
+  pkgs-master,
+  ...
+}:
 {
   # Entry point for Home Manager configuration.
   # https://nix-community.github.io/home-manager/

@@ -1,4 +1,9 @@
-{ pkgs, pkgs-master, inputs, ... }:
+{
+  pkgs,
+  pkgs-master,
+  inputs,
+  ...
+}:
 
 {
   # Entrypoint for nix-darwin configuration.
@@ -105,19 +110,21 @@
       enableKeyMapping = true;
 
       # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
-      userKeyMapping = let
-        lcmd   = 30064771299; # 0x7000000e3
-        lopt   = 30064771298; # 0x7000000e2
-      in [
-        {
-          HIDKeyboardModifierMappingSrc = lcmd;
-          HIDKeyboardModifierMappingDst = lopt;
-        }
-        {
-          HIDKeyboardModifierMappingSrc = lopt;
-          HIDKeyboardModifierMappingDst = lcmd;
-        }
-      ];
+      userKeyMapping =
+        let
+          lcmd = 30064771299; # 0x7000000e3
+          lopt = 30064771298; # 0x7000000e2
+        in
+        [
+          {
+            HIDKeyboardModifierMappingSrc = lcmd;
+            HIDKeyboardModifierMappingDst = lopt;
+          }
+          {
+            HIDKeyboardModifierMappingSrc = lopt;
+            HIDKeyboardModifierMappingDst = lcmd;
+          }
+        ];
     };
   };
 }

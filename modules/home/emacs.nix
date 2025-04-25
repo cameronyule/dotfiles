@@ -1,4 +1,9 @@
-{ config, pkgs, pkgs-master, ... }:
+{
+  config,
+  pkgs,
+  pkgs-master,
+  ...
+}:
 {
   # Install Emacs
   programs.emacs = {

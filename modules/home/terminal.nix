@@ -39,7 +39,10 @@
 
       # https://github.com/zsh-users/zsh-syntax-highlighting
       syntaxHighlighting.enable = true;
-      syntaxHighlighting.highlighters = [ "main" "brackets" ];
+      syntaxHighlighting.highlighters = [
+        "main"
+        "brackets"
+      ];
 
       # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zsh.history
       history = {
