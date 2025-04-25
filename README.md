@@ -119,6 +119,14 @@ NB: This will not undo any of the configuration changes that have been applied t
 
 See [roadmap](docs/roadmap.md) for further information.
 
+### Formatting
+
+Run [nix fmt](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-fmt) with the [nixfmt](https://github.com/NixOS/nixfmt) formatter:
+
+``` shell
+nix fmt
+```
+
 ### Linting
 
 Run the [statix](https://github.com/oppiliappan/statix) linter in a local working copy:

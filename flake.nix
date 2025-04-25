@@ -30,6 +30,7 @@
       };
     };
   in {
+    formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
     darwinConfigurations = {
       "nexus" = nix-darwin.lib.darwinSystem {
         inherit specialArgs;
