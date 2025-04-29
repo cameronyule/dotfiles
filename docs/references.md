@@ -9,6 +9,12 @@ Guides to getting started with [Nix](https://nixos.org).
 * [Zero to Nix](https://zero-to-nix.com)
 * [Nix Pills](https://nixos.org/guides/nix-pills/)
 
+### Flakes
+
+* [Practical Nix Flakes](https://serokell.io/blog/practical-nix-flakes)
+* [Nix Flakes: an Introduction](https://xeiaso.net/blog/nix-flakes-1-2022-02-21/)
+* [Conquer dev environments with Nix](https://robertovitillo.com/conquer-dev-environments-with-nix/)
+
 ## nix-darwin
 
 nix-darwin "aims to bring the convenience of a declarative system approach to macOS".
@@ -40,6 +46,7 @@ A system for managing user environments in coordination with Nix. My primary int
 * [Home Manager](https://github.com/nix-community/home-manager)
 * [Managing dotfiles on macOS with Nix](https://davi.sh/blog/2024/02/nix-home-manager/)
 * [Tidying up your $HOME with Nix](https://juliu.is/tidying-your-home-with-nix/)
+* [Setting up a development environment with Nix and Home Manager](https://www.rousette.org.uk/archives/setting-up-a-development-environment-with-nix-and-home-manager/)
 * [Home-Manager Dark Mode Toggle](https://ryan.himmelwright.net/post/home-manager-dark-mode/)
 
 ## Emacs
