@@ -30,10 +30,13 @@
       pandoc
 
       # Nix
+      nixd
       nixfmt-rfc-style
 
       # SH
+      bash-language-server
       shellcheck
+      shfmt
 
       # vterm
       cmake
@@ -157,7 +160,7 @@
                  ;;ein               ; tame Jupyter notebooks with emacs
                  (eval +overlay)     ; run code, run (also, repls)
                  lookup              ; navigate your code and its documentation
-                 lsp               ; M-x vscode
+                 (lsp +peek)               ; M-x vscode
                  magit             ; a git porcelain for Emacs
                  ;;make              ; run make tasks from Emacs
                  ;;pass              ; password manager for nerds
@@ -210,7 +213,7 @@
                  ;;lua               ; one-based indices? one-based indices
                  markdown          ; writing docs for people to ignore
                  ;;nim               ; python + lisp at the speed of c
-                 nix               ; I hereby declare "nix geht mehr!"
+                 (nix +tree-sitter +lsp)              ; I hereby declare "nix geht mehr!"
                  ;;ocaml             ; an objective camel
                  org               ; organize your plain life in plain text
                  ;;php               ; perl's insecure younger brother
@@ -227,7 +230,7 @@
                  ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
                  ;;scala             ; java, but good
                  ;;(scheme +guile)   ; a fully conniving family of lisps
-                 sh                ; she sells {ba,z,fi}sh shells on the C xor
+                 (sh +tree-sitter +lsp)                ; she sells {ba,z,fi}sh shells on the C xor
                  ;;sml
                  ;;solidity          ; do you need a blockchain? No.
                  ;;swift             ; who asked for emoji variables?
