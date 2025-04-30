@@ -7,6 +7,17 @@
       enable = true;
     };
 
+    # https://github.com/direnv/direnv
+    # https://github.com/nix-community/nix-direnv
+    # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.direnv.enable
+    direnv = {
+      enable =  true;
+      enableZshIntegration = true;
+      nix-direnv = {
+        enable = true;
+      };
+    };
+
     # https://github.com/eza-community/eza
     # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.eza.enable
     eza = {

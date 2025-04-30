@@ -157,7 +157,7 @@
                  ;;biblio            ; Writes a PhD for you (citation needed)
                  ;;collab            ; buffers with friends
                  ;;debugger          ; FIXME stepping through code, to help you add bugs
-                 ;;direnv
+                 direnv
                  ;;docker
                  editorconfig      ; let someone else argue about tabs vs spaces
                  ;;ein               ; tame Jupyter notebooks with emacs
@@ -230,7 +230,7 @@
                  ;;rest              ; Emacs as a REST client
                  ;;rst               ; ReST in peace
                  ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-                 ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+                 (rust +tree-sitter +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
                  ;;scala             ; java, but good
                  ;;(scheme +guile)   ; a fully conniving family of lisps
                  (sh +tree-sitter +lsp)                ; she sells {ba,z,fi}sh shells on the C xor

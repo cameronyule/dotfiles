@@ -78,6 +78,36 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 * [How I Take Notes with Org-roam](https://jethrokuan.github.io/org-roam-guide/)
 * [Build a Second Brain in Emacs with Org Roam](https://systemcrafters.net/build-a-second-brain-in-emacs/getting-started-with-org-roam/pp)
 
+## Development
+
+* [nix develop](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-develop)
+* [Managing development environments with Nix](https://jeffkreeftmeijer.com/nix-devshells/)
+* [NixOS: For developers](https://myme.no/posts/2020-01-26-nixos-for-development.html)
+* [Nix shell and nix develop](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/)
+
+### Devenv
+
+* [cachix/devenv](https://github.com/cachix/devenv)
+* [cachix/nixcon-2024-workshop](https://github.com/cachix/nixcon-2024-workshop)
+
+### Direnv
+
+* [direnv: manage dev environments](https://nixos.asia/en/direnv)
+* [direnv/direnv](https://github.com/direnv/direnv)
+* [nix-community/nix-direnv](https://github.com/nix-community/nix-direnv)
+  * [Setting up home-manager with nix-direnv](https://rexk.github.io/en/blog/nix-home-manager-direnv/)
+* [doomemacs/direnv](https://github.com/doomemacs/doomemacs/blob/master/modules/tools/direnv/README.org)
+
+### Rust
+
+* [Nix shell with rustup](https://ayats.org/blog/nix-rustup)
+* [Building a Rust service with Nix](https://fasterthanli.me/series/building-a-rust-service-with-nix)
+  * [Making a dev shell with nix flakes](https://fasterthanli.me/series/building-a-rust-service-with-nix/part-10)
+* [Nix Powered Dev Environments: Rust](https://blog.graysonhead.net/posts/sane-nix-flake-rust/)
+* [oxalica/rust-overlay](https://github.com/oxalica/rust-overlay)
+* [naersk](https://github.com/nix-community/naersk)
+* [nix-community/fenix](https://github.com/nix-community/fenix)
+
 ## Keyboard
 
 The keyboard I use - a [Drop CTRL](https://drop.com/buy/drop-ctrl-mechanical-keyboard) - has a Windows-style layout which results in the Command and Option keys being swapped around on macOS. The below explains how to fix this using `hidutil` which can then be mapped to nix-darwin configuration.
