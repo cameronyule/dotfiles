@@ -65,7 +65,7 @@
 
       # https://github.com/aloxaf/fzf-tab
       # https://discourse.nixos.org/t/darwin-home-manager-zsh-fzf-and-zsh-fzf-tab/33943/2
-      initExtra = ''
+      initContent = ''
         source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
       '';
 

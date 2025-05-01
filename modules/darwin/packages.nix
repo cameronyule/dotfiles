@@ -5,7 +5,7 @@
   environment.systemPackages = with pkgs; [
     maccy
     rectangle
-    signal-desktop
+    signal-desktop-bin
     utm
     zotero
   ];
