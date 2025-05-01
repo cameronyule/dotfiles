@@ -16,6 +16,7 @@
       nix-direnv = {
         enable = true;
       };
+      silent = true;
     };
 
     # https://github.com/eza-community/eza
