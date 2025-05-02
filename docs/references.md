@@ -72,6 +72,10 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
   * [nixd](https://github.com/nix-community/nixd)
   * [lsp-mode nix.el](https://github.com/emacs-lsp/lsp-mode/blob/d35aa757a3afde7a62efd67e2b84a9d8324951c0/clients/lsp-nix.el)
 
+### Tree-Sitter
+
+* [How to Get Started with Tree-Sitter](https://www.masteringemacs.org/article/how-to-get-started-tree-sitter)
+
 ### Roam
 
 * [org-roam](https://www.orgroam.com)
