@@ -7,9 +7,6 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
-    nixpkgs-master = {
-      url = "github:NixOS/nixpkgs/master";
-    };
     nix-darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,15 +23,11 @@
       home-manager,
       nix-darwin,
       nixpkgs,
-      nixpkgs-master,
     }:
     let
       system = "aarch64-darwin";
       specialArgs = {
         inherit inputs;
-        pkgs-master = import nixpkgs-master {
-          inherit system;
-        };
       };
     in
     {

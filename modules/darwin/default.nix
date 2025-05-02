@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-master,
   inputs,
   ...
 }:
@@ -44,7 +43,7 @@
             app = "/System/Cryptexes/App/System/Applications/Safari.app";
           }
           {
-            app = "${pkgs-master.emacs}/Applications/Emacs.app";
+            app = "${pkgs.emacs}/Applications/Emacs.app";
           }
           {
             app = "/System/Applications/Utilities/Terminal.app";
