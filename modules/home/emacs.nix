@@ -37,7 +37,8 @@
       shfmt
 
       # Spelling
-      aspell
+      (aspellWithDicts (dicts: with dicts;
+        [ en en-computers en-science ]))
 
       # vterm
       cmake
