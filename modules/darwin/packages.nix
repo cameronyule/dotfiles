@@ -4,6 +4,7 @@
   # Install nix packages.
   environment.systemPackages = with pkgs; [
     aider-chat
+    discord
     maccy
     rectangle
     signal-desktop-bin
