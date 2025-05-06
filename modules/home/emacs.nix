@@ -350,6 +350,8 @@
 
           (use-package! typst-ts-mode
            :mode "\\.typ\\'")
+
+          (setq doom-theme 'doom-solarized-light)
         '';
       };
 
