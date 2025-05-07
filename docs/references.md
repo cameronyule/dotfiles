@@ -24,6 +24,7 @@ nix-darwin "aims to bring the convenience of a declarative system approach to ma
 * [Setting up Nix on macOS](https://nixcademy.com/posts/nix-on-macos/)
 * [Setting up Nix on macOS](https://davi.sh/til/nix/nix-macos-setup/)
 * [Package management on macOS with nix-darwin](https://davi.sh/blog/2024/01/nix-darwin/)
+* [Getting Started with Nix](https://mirosval.sk/blog/2023/nix-getting-started/)
 
 ### Example Configurations
 
@@ -65,6 +66,12 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 * [zzamboni configuration](https://zzamboni.org/post/my-doom-emacs-configuration-with-commentary/)
 * [justin.vc configuration](https://notes.justin.vc/config)
 * [A handbook for the Doom Emacs initiate](https://valerioviperino.me/doom-emacs-handbook/)
+* [Doom Emacs Workflows](https://noelwelsh.com/posts/doom-emacs/)
+* [Doom Emacs Config](https://www.const.no/init/)
+* [Switching to Doom Emacs](https://ethanaa.com/blog/switching-to-doom-emacs/)
+* [Migrating to Doom Emacs](https://blog.jethro.dev/posts/migrating_to_doom_emacs/)
+* [My Literate Doom Emacs Configuration](https://joshblais.com/posts/my-literate-doom-emacs-config/)
+* [Doom Emacs Config](https://hieuphay.com/doom-emacs-config/)
 
 ### LSP
 
@@ -72,11 +79,31 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
   * [nixd](https://github.com/nix-community/nixd)
   * [lsp-mode nix.el](https://github.com/emacs-lsp/lsp-mode/blob/d35aa757a3afde7a62efd67e2b84a9d8324951c0/clients/lsp-nix.el)
 
+### Debugging
+
+* [Doom Debugger](https://github.com/doomemacs/doomemacs/tree/master/modules/tools/debugger)
+  * [debug-adaptor-protocol](https://github.com/microsoft/debug-adapter-protocol)
+  * [DAPE](https://github.com/svaante/dape)
+  * [Emacs IDE - How to Debug Your Code with dap-mode](https://www.youtube.com/live/0bilcQVSlbM)
+  * [DAP and LSP](https://emacs-lsp.github.io/dap-mode/page/configuration/)
+* [LLDB](https://lldb.llvm.org/index.html)
+  * [Debug Adapator Protocol (DAP)](https://jonasdevlieghere.com/post/lldb-dap/)
+  * [Building](https://lldb.llvm.org/resources/build.html)
+  * [Remote Debugging](https://lldb.llvm.org/use/remote.html)
+* [Debugging Ruby with Emacs](https://www.sharmaso.com/posts/debugging-ruby-with-emacs/)
+* [Debugging Rust with Emacs](https://users.rust-lang.org/t/debugging-in-emacs-doom/99540)
+* [Debugging Emacs](https://mclare.blog/posts/debugging-emacs/)
+
 ### Tree-Sitter
 
 * [How to Get Started with Tree-Sitter](https://www.masteringemacs.org/article/how-to-get-started-tree-sitter)
 
-### Roam
+### Org Mode
+
+* [Doom Emacs tweaks: Org Journal and Super Agenda](https://www.rousette.org.uk/archives/doom-emacs-tweaks-org-journal-and-org-super-agenda/)
+* [Org-modern and svg-tag-mode](https://hieuphay.com/doom-emacs-config/#org-modern-and-svg-tag-mode)
+
+#### Org Roam
 
 * [org-roam](https://www.orgroam.com)
 * [How I Take Notes with Org-roam](https://jethrokuan.github.io/org-roam-guide/)
