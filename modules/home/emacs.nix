@@ -53,8 +53,8 @@
         source = pkgs.fetchFromGitHub {
           owner = "doomemacs";
           repo = "doomemacs";
-          rev = "baf680f9c8dc699f458888583423789fd41f8c19";
-          hash = "sha256-yCT9DUQzJnr4KNZjrGnsZSJstsHGkY3WIZ9WqdJ7jRo=";
+          rev = "b70d137f1a224cdbac3994d249fb5e8c7fcc203a";
+          hash = "sha256-bfoTBSsy/1S7+6uR3ig5EA8AAQ1RhmDLNF/m2RXU2sM=";
         };
         recursive = true;
       };
