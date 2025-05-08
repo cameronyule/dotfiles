@@ -35,6 +35,7 @@
       "1password-cli"
       "dropbox"
       "firefox"
+      "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
       "lookaway"
       "spotify"
       "zoom"

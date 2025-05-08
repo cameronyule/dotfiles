@@ -46,7 +46,7 @@
             app = "${pkgs.emacs}/Applications/Emacs.app";
           }
           {
-            app = "/System/Applications/Utilities/Terminal.app";
+            app = "/Applications/Ghostty.app";
           }
           {
             app = "/Applications/1Password.app";
