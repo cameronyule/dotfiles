@@ -4,6 +4,9 @@ _:
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
+  # https://nix.dev/manual/nix/2.23/command-ref/conf-file.html?highlight=sandbox#conf-sandbox
+  nix.settings.sandbox = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
