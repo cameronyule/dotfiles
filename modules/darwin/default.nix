@@ -97,6 +97,10 @@
           "gapSize" = 15;
           "launchOnLogin" = 1;
         };
+
+        "com.mysticalbits.lookaway" = {
+          "longBreakTime" = 60;
+        };
       };
     };
 
