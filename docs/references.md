@@ -14,8 +14,14 @@ Guides to getting started with [Nix](https://nixos.org).
 * [Practical Nix Flakes](https://serokell.io/blog/practical-nix-flakes)
 * [Nix Flakes: an Introduction](https://xeiaso.net/blog/nix-flakes-1-2022-02-21/)
 * [Conquer dev environments with Nix](https://robertovitillo.com/conquer-dev-environments-with-nix/)
+* [Hermetic shells](https://github.com/NixOS/nix/issues/4359#issuecomment-907768110)
 
-## nix-darwin
+## Nix on Darwin
+
+* [Nix Manual - Darwin (macOS)](https://nixos.org/manual/nixpkgs/stable/#sec-darwin)
+* [Nix Manual - iOS](https://nixos.org/manual/nixpkgs/stable/#ios)
+
+### nix-darwin
 
 nix-darwin "aims to bring the convenience of a declarative system approach to macOS".
 
@@ -26,7 +32,7 @@ nix-darwin "aims to bring the convenience of a declarative system approach to ma
 * [Package management on macOS with nix-darwin](https://davi.sh/blog/2024/01/nix-darwin/)
 * [Getting Started with Nix](https://mirosval.sk/blog/2023/nix-getting-started/)
 
-### Example Configurations
+#### Example Configurations
 
 * [torgeir/nix-darwin](https://github.com/torgeir/nix-darwin)
 * [ryan4yin/nix-darwin-kickstarter](https://github.com/ryan4yin/nix-darwin-kickstarter)
