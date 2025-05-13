@@ -32,17 +32,6 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ```
 </details>
 
-### 2. Install Homebrew
-We install Homebrew to make it available to nix-darwin, which will manage installing any [Homebrew Casks](https://github.com/Homebrew/homebrew-cask) on our behalf. Homebrew will automatically [install the Xcode Command Line Tools](https://github.com/Homebrew/install/commit/493954aba6c4dfc37f2567eb7f67874c7ea51b11) during installation.
-
-<details>
-<summary>Install Command</summary>
-
- ```shell
- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-</details>
-
 ## Usage
 
 ### Bootstrap
