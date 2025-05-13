@@ -1,6 +1,8 @@
 {
   pkgs,
   inputs,
+  username,
+  hostname,
   ...
 }:
 
@@ -9,10 +11,13 @@
   # https://nix-darwin.github.io/nix-darwin/manual/
 
   # Declare the user that will be running `nix-darwin`.
-  users.users.cameronyule = {
-    name = "cameronyule";
-    home = "/Users/cameronyule";
+  users.users."${username}" = {
+    name = "${username}";
+    home = "/Users/${username}";
   };
+
+  networking.hostName = hostname;
+  networking.computerName = hostname;
 
   # https://github.com/nix-darwin/nix-darwin/blob/43975d782b418ebf4969e9ccba82466728c2851b/modules/services/karabiner-elements/default.nix
   # services = {

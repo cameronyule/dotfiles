@@ -26,14 +26,18 @@
     }:
     let
       system = "aarch64-darwin";
+      username = "cameronyule";
+      hostname = "nexus";
+
       specialArgs = {
-        inherit inputs;
+        inherit inputs username hostname;
       };
     in
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
+
       darwinConfigurations = {
-        "nexus" = nix-darwin.lib.darwinSystem {
+        "${hostname}" = nix-darwin.lib.darwinSystem {
           inherit specialArgs;
           modules = [
             ./modules/nix-core.nix
