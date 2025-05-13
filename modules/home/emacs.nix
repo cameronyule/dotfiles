@@ -37,8 +37,13 @@
       shfmt
 
       # Spelling
-      (aspellWithDicts (dicts: with dicts;
-        [ en en-computers en-science ]))
+      (aspellWithDicts (
+        dicts: with dicts; [
+          en
+          en-computers
+          en-science
+        ]
+      ))
 
       # vterm
       cmake
@@ -258,7 +263,6 @@
                  (default +bindings +smartparens))
         '';
       };
-
 
       # Emacs and Doom Configuration
       # https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#installing-packages
