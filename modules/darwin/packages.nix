@@ -44,6 +44,7 @@
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.masApps
     masApps = {
       "1Password for Safari" = 1569813296;
+      "AdGuard for Safari" = 1440147259;
       WhatsApp = 310633997;
       Xcode = 497799835;
     };
