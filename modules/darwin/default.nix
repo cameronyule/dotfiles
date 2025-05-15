@@ -134,5 +134,15 @@
           }
         ];
     };
+
+    # Enable macOS Screen Sharing
+    # https://github.com/nix-darwin/nix-darwin/issues/797
+    activationScripts.extraActivation.text = ''
+    if [[ ! $(launchctl print system/com.apple.screensharing 2>/dev/null) ]]; then
+       defaults write /var/db/launchd.db/com.apple.launchd/overrides.plist com.apple.screensharing \
+         -dict Disabled -bool false
+       launchctl load -w /System/Library/LaunchDaemons/com.apple.screensharing.plist
+    fi
+    '';
   };
 }
