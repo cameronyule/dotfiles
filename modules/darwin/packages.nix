@@ -36,6 +36,7 @@
       "dropbox"
       "firefox"
       "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
+      "little-snitch"
       "lookaway"
       "spotify"
       "zoom"
