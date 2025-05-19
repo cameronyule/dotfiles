@@ -104,6 +104,7 @@
         };
 
         "com.mysticalbits.lookaway" = {
+          "breakTime" = 20;
           "longBreakTime" = 60;
         };
       };
