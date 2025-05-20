@@ -5,10 +5,13 @@
   environment.systemPackages = with pkgs; [
     aider-chat
     discord
+    firefox
     maccy
     rectangle
     signal-desktop-bin
+    spotify # FIXME Outdated version https://github.com/NixOS/nixpkgs/blob/8406224e30c258025cb8b31704bdb977a8f1f009/pkgs/by-name/sp/spotify/darwin.nix#L16
     utm
+    zoom-us
     zotero
   ];
 
@@ -34,12 +37,9 @@
       "1password" # https://github.com/NixOS/nixpkgs/issues/254944
       "1password-cli"
       "dropbox"
-      "firefox"
       "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
       "little-snitch"
       "lookaway"
-      "spotify"
-      "zoom"
     ];
 
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.masApps
