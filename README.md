@@ -22,7 +22,7 @@ See [bootstrap](docs/bootstrap.md) for further information.
 
 ### 1. Install Nix
 
-I use the [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#installation), but the [official installer](https://nixos.org/download/) can also be used as long as [flakes are enabled](https://nixos.wiki/wiki/Flakes#Other_Distros.2C_with_Home-Manager).
+I use the [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#installation) as it enables Nix Flakes by default and has a comprehensive uninstaller. The [official Nix installer](https://nixos.org/download/) can also be used as long as [flakes are enabled](https://nixos.wiki/wiki/Flakes#Other_Distros.2C_with_Home-Manager) afterwards. Note that when installing Nix using the Determinate Systems installer, I do not install the Determinate Systems [downstream distribution of Nix](https://docs.determinate.systems/determinate-nix/).
 
 <details>
 <summary>Install Command</summary>
