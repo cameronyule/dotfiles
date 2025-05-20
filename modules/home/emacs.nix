@@ -22,7 +22,7 @@
       editorconfig-core-c
 
       # LSP
-      nodejs_23
+      nodejs
 
       # Markdown
       pandoc

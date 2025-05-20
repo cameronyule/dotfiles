@@ -32,6 +32,9 @@
     # $ darwin-rebuild changelog
     stateVersion = 6;
 
+    # https://github.com/nix-darwin/nix-darwin/blob/b9b927dd1f24094b271e8ec5277a672dc4fc860d/CHANGELOG#L11
+    primaryUser = "${username}";
+
     # https://nix-darwin.github.io/nix-darwin/manual/index.html
     # https://macos-defaults.com
     defaults = {
