@@ -51,6 +51,9 @@
             app = "/System/Cryptexes/App/System/Applications/Safari.app";
           }
           {
+            app = "/System/Applications/Mail.app";
+          }
+          {
             app = "${pkgs.emacs}/Applications/Emacs.app";
           }
           {
