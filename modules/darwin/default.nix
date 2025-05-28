@@ -54,6 +54,9 @@
             app = "/System/Applications/Mail.app";
           }
           {
+            app = "/System/Applications/Calendar.app";
+          }
+          {
             app = "${pkgs.emacs}/Applications/Emacs.app";
           }
           {
