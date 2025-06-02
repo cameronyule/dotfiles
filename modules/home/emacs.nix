@@ -58,8 +58,8 @@
         source = pkgs.fetchFromGitHub {
           owner = "doomemacs";
           repo = "doomemacs";
-          rev = "b70d137f1a224cdbac3994d249fb5e8c7fcc203a";
-          hash = "sha256-bfoTBSsy/1S7+6uR3ig5EA8AAQ1RhmDLNF/m2RXU2sM=";
+          rev = "8406c1ff22b95bd0f816de4a0223fa3ce3c82568";
+          hash = "sha256-rOkgOdmLESVAbOeEM9nJTzxyI+akdk48Ed2VlktOy3Q=";
         };
         recursive = true;
       };
@@ -106,7 +106,7 @@
                  ;;(emoji +unicode)  ; 🙂
                  hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
                  ;;indent-guides     ; highlighted indent columns
-                 (ligatures +extra)         ; ligatures and symbols to make your code pretty again
+                 ;;(ligatures +extra)         ; ligatures and symbols to make your code pretty again
                  ;;minimap           ; show a map of the code on the side
                  modeline          ; snazzy, Atom-inspired modeline, plus API
                  ;;nav-flash         ; blink cursor line after big motions
@@ -227,7 +227,7 @@
                  ;;plantuml          ; diagrams for confusing people more
                  ;;graphviz          ; diagrams for confusing yourself even more
                  ;;purescript        ; javascript, but functional
-                 ;;python            ; beautiful is better than ugly
+                 (python +lsp +pyright)            ; beautiful is better than ugly
                  ;;qt                ; the 'cutest' gui framework ever
                  ;;racket            ; a DSL for DSLs
                  ;;raku              ; the artist formerly known as perl6
@@ -389,7 +389,7 @@
 
           ;; If you use `org' and don't want your org files in the default location below,
           ;; change `org-directory'. It must be set before org loads!
-          (setq org-directory "~/org/")
+          (setq org-directory "~/Dropbox/Notes/")
 
 
           ;; Whenever you reconfigure a package, make sure to wrap your config in an
