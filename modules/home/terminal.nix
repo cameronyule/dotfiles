@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    tree
+  ];
+
   programs = {
     # https://github.com/sharkdp/bat
     # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.bat.enable
