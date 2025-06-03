@@ -106,8 +106,19 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 
 ### Org Mode
 
+* [Org Mode - Organize Your Life In Plain Text!](https://doc.norang.ca/org-mode.html)
 * [Doom Emacs tweaks: Org Journal and Super Agenda](https://www.rousette.org.uk/archives/doom-emacs-tweaks-org-journal-and-org-super-agenda/)
 * [Org-modern and svg-tag-mode](https://hieuphay.com/doom-emacs-config/#org-modern-and-svg-tag-mode)
+* [Beautifying Emacs Org Mode](https://sophiebos.io/posts/beautifying-emacs-org-mode/)
+* [Emacs GTD flow evolved](https://daryl.wakatara.com/emacs-gtd-flow-evolved/)
+* [How do I keep my days organized with org-mode and Emacs](https://isamert.net/2021/01/25/how-i-do-keep-my-days-organized-with-org-mode-and-emacs.html)
+* [Org-mode configuration](https://hugocisneros.com/org-config/)
+* [My Doom Emacs configurations --- Org-mode](https://hieuphay.com/doom-emacs-config/#org-mode)
+* [Beautifying Org Mode in Emacs](https://zzamboni.org/post/beautifying-org-mode-in-emacs/)
+* [Tuning Emacs to Write Prose in Org and Markdown](http://yummymelon.com/devnull/tuning-emacs-to-write-prose-in-org-and-markdown.html)
+* [Why and How I use "Org Mode" for my writing and more](https://www.evalapply.org/posts/why-and-how-i-use-org-mode/index.html)
+* [How I get work done with Emacs and org-mode](https://www.philnewton.net/blog/how-i-get-work-done-with-emacs/)
+* [Getting Things Done](https://omalab.gitbook.io/guide/operating-model/gtd)
 
 #### Org Roam
 
