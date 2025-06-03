@@ -405,6 +405,9 @@
             :config
               (setq mixed-pitch-set-height t))
 
+          ;; https://hieuphay.com/doom-emacs-config/#turn-off-highlighting-current-line
+          (add-hook 'text-mode-hook (lambda () (hl-line-mode -1)))
+
           ;; This determines the style of line numbers in effect. If set to `nil', line
           ;; numbers are disabled. For relative line numbers, set this to `relative'.
           (setq display-line-numbers-type t)
