@@ -398,6 +398,13 @@
 
           (setq doom-font (font-spec :family "FiraCode Nerd Font" :weight 'medium :size 12))
           (setq doom-variable-pitch-font (font-spec :family "ETBembo" :size 16))
+
+          (use-package! mixed-pitch
+            :hook ((org-mode . mixed-pitch-mode)
+                   (markdown-mode . mixed-pitch-mode))
+            :config
+              (setq mixed-pitch-set-height t))
+
           ;; This determines the style of line numbers in effect. If set to `nil', line
           ;; numbers are disabled. For relative line numbers, set this to `relative'.
           (setq display-line-numbers-type t)
