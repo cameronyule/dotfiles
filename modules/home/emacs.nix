@@ -335,11 +335,10 @@
           ;; [3] https://codeberg.org/meow_king/typst-ts-mode/wiki/Installation.md#requirement
           ;; [4] https://github.com/Myriad-Dreamin/tinymist?tab=readme-ov-file#installation
           ;;
+
           (package! typst-ts-mode
             :recipe (:host codeberg :repo "meow_king/typst-ts-mode")
             :pin "972dc69d6b8a3f8983f6b8000654f59c8a8d05ba")
-
-          (package! visual-fill-column :pin "30fc3e4ea9aa415eccc873e5d7c4f1bbc0491495")
         '';
       };
 
@@ -439,12 +438,6 @@
           (setq doom-theme 'doom-solarized-light)
           (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 12 :weight 'medium))
 
-          ;; https://codeberg.org/joostkremers/visual-fill-column
-          (use-package! visual-fill-column
-            :custom
-              (visual-fill-column-width 125)
-              :hook (org-mode . visual-fill-column-mode)
-              :hook (markdown-mode . visual-fill-column-mode))
         '';
       };
     };
