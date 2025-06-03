@@ -15,7 +15,12 @@
     zotero
   ];
 
+  # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-fonts.packages
   fonts.packages = with pkgs; [
+    # Proportional font for things like Org.
+    # https://github.com/edwardtufte/et-book
+    etBook
+    # Monotype font for things like code and terminals.
     # https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
     # Required by https://starship.rs/guide/
     nerd-fonts.fira-code

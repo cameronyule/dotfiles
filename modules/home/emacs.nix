@@ -383,6 +383,21 @@
 
           (setq doom-theme 'doom-solarized-light)
 
+          ;; Using fixed (monospace) and variable (proportional) fonts dependent on context.
+          ;;
+          ;; See:
+          ;;
+          ;; https://github.com/doomemacs/doomemacs/tree/master/modules/ui/doom#changing-fonts
+          ;; https://github.com/doomemacs/doomemacs/tree/master/modules/ui/zen
+          ;; https://discourse.doomemacs.org/t/cant-size-doom-variable-pitch-font/4572/3
+          ;;
+          ;; http://yummymelon.com/devnull/tuning-emacs-to-write-prose-in-org-and-markdown.html
+          ;; https://sophiebos.io/posts/beautifying-emacs-org-mode/#fonts
+          ;; https://hieuphay.com/doom-emacs-config/#font-configs
+          ;; https://zzamboni.org/post/beautifying-org-mode-in-emacs/#step-2-setting-up-variable-pitch-and-fixed-pitch-faces
+
+          (setq doom-font (font-spec :family "FiraCode Nerd Font" :weight 'medium :size 12))
+          (setq doom-variable-pitch-font (font-spec :family "ETBembo" :size 16))
           ;; This determines the style of line numbers in effect. If set to `nil', line
           ;; numbers are disabled. For relative line numbers, set this to `relative'.
           (setq display-line-numbers-type t)
@@ -434,8 +449,6 @@
 
           (use-package! typst-ts-mode
            :mode "\\.typ\\'")
-          (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 12 :weight 'medium))
-
         '';
       };
     };
