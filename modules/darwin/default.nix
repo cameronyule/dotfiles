@@ -113,8 +113,11 @@
         };
 
         "com.mysticalbits.lookaway" = {
-          "breakTime" = 20;
-          "longBreakTime" = 60;
+          "focusTime" = 1800; # focus duration between breaks (seconds)
+          "breakTime" = 20; # duration of a 'short' break (seconds)
+          "longBreakThreshold" = 3; # count of 'short' breaks before a 'long' break
+          "longBreakTime" = 60; # duration of a 'long' break (seconds)
+          "postureReminderEnabled" = 0; # disable posture reminders
         };
       };
     };
