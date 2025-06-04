@@ -12,38 +12,29 @@ let
   };
 in
 {
-  # Install Emacs
   programs.emacs = {
     enable = true;
   };
 
   home = {
-
     packages = with pkgs; [
       # Doom dependencies
       fd
       ripgrep
-
       # Doom Module dependencies
-
       # Editorconfig
       editorconfig-core-c
-
       # LSP
       nodejs
-
       # Markdown
       pandoc
-
       # Nix
       nixd
       nixfmt-rfc-style
-
       # SH
       bash-language-server
       shellcheck
       shfmt
-
       # Spelling
       (aspellWithDicts (
         dicts: with dicts; [
@@ -52,16 +43,13 @@ in
           en-science
         ]
       ))
-
       # vterm
       cmake
       libvterm-neovim
     ];
 
     file = {
-
-      # Install Doom Emacs
-      # https://github.com/doomemacs/doomemacs
+      # Doom Emacs.
       "${config.xdg.configHome}/emacs" = {
         source = pkgs.fetchFromGitHub {
           owner = "doomemacs";
@@ -91,8 +79,8 @@ in
       "${config.xdg.configHome}/doom/packages.el".source = "${dotemacs}/packages.el";
     };
 
+    # Ensure Doom-provided binaries are included in PATH.
     sessionPath = [
-      # Add Doom Emacs CLI to the PATH.
       "${config.xdg.configHome}/emacs/bin"
     ];
 
@@ -102,7 +90,7 @@ in
       # https://github.com/doomemacs/doomemacs/blob/303dd28db808b42a2397c0f4b9fdd71e606026ff/lisp/doom.el#L285
       DOOMLOCALDIR = "${config.xdg.configHome}/emacs/.local";
 
-      # Set emcas in terminal mode as the default editor.
+      # Set Emacs as the default editor in the terminal.
       EDITOR = "emacs -nw";
     };
   };
