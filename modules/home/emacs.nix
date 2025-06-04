@@ -414,8 +414,13 @@
 
           ;; If you use `org' and don't want your org files in the default location below,
           ;; change `org-directory'. It must be set before org loads!
-          (setq org-directory "~/Dropbox/Notes/")
-
+          (setq org-directory "~/Dropbox/Notes")
+          (setq org-agenda-files (list org-directory
+                                       (concat org-directory "/archives")
+                                       (concat org-directory "/areas")
+                                       (concat org-directory "/logs")
+                                       (concat org-directory "/projects")
+                                       (concat org-directory "/references")))
 
           ;; Whenever you reconfigure a package, make sure to wrap your config in an
           ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
