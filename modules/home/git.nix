@@ -13,6 +13,11 @@
         signByDefault = true;
         signer = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
       };
+      extraConfig = {
+        github = {
+          user = "cameronyule";
+        };
+      };
     };
   };
 }
