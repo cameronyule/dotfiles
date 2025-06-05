@@ -119,6 +119,8 @@ There are many different methods for installing [Emacs](https://www.gnu.org/soft
 * [Why and How I use "Org Mode" for my writing and more](https://www.evalapply.org/posts/why-and-how-i-use-org-mode/index.html)
 * [How I get work done with Emacs and org-mode](https://www.philnewton.net/blog/how-i-get-work-done-with-emacs/)
 * [Getting Things Done](https://omalab.gitbook.io/guide/operating-model/gtd)
+* [eos-org](https://github.com/dakrone/eos/blob/master/eos-org.org)
+* [GTD.org](https://github.com/rougier/emacs-gtd/blob/master/GTD.org)
 
 #### Org Roam
 
