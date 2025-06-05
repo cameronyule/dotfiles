@@ -3,14 +3,6 @@
   pkgs,
   ...
 }:
-let
-  dotemacs = pkgs.fetchFromGitHub {
-    owner = "cameronyule";
-    repo = "dotemacs";
-    rev = "307e4113f8d99d4994bbe178d7e2baa3258b25df";
-    hash = "sha256-vklFhe15DcBdAhiCPd/zvsQbbieBnnNIKUzOFXauaM8=";
-  };
-in
 {
   programs.emacs = {
     enable = true;
@@ -72,12 +64,15 @@ in
       # FIXME emacs-libvterm compiling vterm at runtime necessitates passing Nix store paths
       # to my Emacs configuration. This level of complexity doesn't feel worth it, as being
       # able to access vterm within Emacs is a nice-to-have at best.
-      "${config.xdg.configHome}/doom/config.el".source = pkgs.replaceVarsWith {
-        src = "${dotemacs}/config.el";
-        replacements = { libvterm = pkgs.libvterm-neovim; };
+      "${config.xdg.configHome}/doom" = {
+        source =   pkgs.fetchFromGitHub {
+          owner = "cameronyule";
+          repo = "dotemacs";
+          rev = "307e4113f8d99d4994bbe178d7e2baa3258b25df";
+          hash = "sha256-vklFhe15DcBdAhiCPd/zvsQbbieBnnNIKUzOFXauaM8=";
+        };
+        recursive = true;
       };
-      "${config.xdg.configHome}/doom/init.el".source = "${dotemacs}/init.el";
-      "${config.xdg.configHome}/doom/packages.el".source = "${dotemacs}/packages.el";
     };
 
     # Ensure Doom-provided binaries are included in PATH.
