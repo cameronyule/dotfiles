@@ -6,7 +6,6 @@
     aider-chat
     discord
     firefox
-    maccy
     rectangle
     signal-desktop-bin
     spotify # FIXME Outdated version https://github.com/NixOS/nixpkgs/blob/8406224e30c258025cb8b31704bdb977a8f1f009/pkgs/by-name/sp/spotify/darwin.nix#L16
