@@ -17,6 +17,9 @@
         github = {
           user = "cameronyule";
         };
+        pull = {
+          ff = "only";
+        };
       };
     };
   };
