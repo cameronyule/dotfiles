@@ -2,8 +2,6 @@
   description = "macOS configuration";
 
   inputs = {
-    # Tracking rolling release.
-    # https://wiki.nixos.org/wiki/Channel_branches
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };

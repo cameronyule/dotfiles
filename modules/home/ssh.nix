@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
   programs = {
-    # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.ssh.enable
     ssh = {
       enable = true;
       matchBlocks = {

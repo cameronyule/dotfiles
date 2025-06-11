@@ -19,11 +19,6 @@
   networking.hostName = hostname;
   networking.computerName = hostname;
 
-  # https://github.com/nix-darwin/nix-darwin/blob/43975d782b418ebf4969e9ccba82466728c2851b/modules/services/karabiner-elements/default.nix
-  # services = {
-  #   karabiner-elements.enable = false;
-  # };
-
   system = {
     # Set Git commit hash for darwin-version.
     configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
@@ -86,25 +81,9 @@
       };
 
       CustomUserPreferences = {
-        # https://www.reddit.com/r/MacOSBeta/comments/1dsbdf0/comment/lb2s1q4/
-        # https://gist.github.com/David-Elizondo/45d95701c65551427be707fa991d9716
-        # https://apple.stackexchange.com/questions/87619/where-are-keyboard-shortcuts-stored-for-backup-and-sync-purposes
-        # NSGlobalDomain = {
-        #   NSUserKeyEquivalents = {
-        #     "Left" = "@$\\U2190";
-        #     "Right" = "@$\\U2192";
-        #   };
-        # };
-
         # TODO https://github.com/nix-darwin/nix-darwin/issues/1111#issuecomment-2575999820
         # "com.apple.Safari" = {
         #   ShowOverlayStatusBar = true;
-        # };
-
-        # TODO https://gist.github.com/avillafiorita/9e626ce370e1da6c6373
-        # "com.apple.Terminal" = {
-        #   "Default Window Settings" = "Basic";
-        #   "Startup Window Settings" = "Basic";
         # };
 
         "com.knollsoft.Rectangle" = {
