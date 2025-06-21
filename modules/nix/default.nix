@@ -4,7 +4,7 @@ _:
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
-  # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-nix.settings.sandbox
+  # The Nix sandbox is disabled by default on Darwin, re-enabling.
   nix.settings.sandbox = true;
 
   # Allow unfree packages
@@ -12,8 +12,4 @@ _:
 
   # Clean up every once in a while
   nix.gc.automatic = true;
-
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = "aarch64-darwin";
-
 }

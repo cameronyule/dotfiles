@@ -15,6 +15,7 @@ Guides to getting started with [Nix](https://nixos.org).
 * [Nix Flakes: an Introduction](https://xeiaso.net/blog/nix-flakes-1-2022-02-21/)
 * [Conquer dev environments with Nix](https://robertovitillo.com/conquer-dev-environments-with-nix/)
 * [Hermetic shells](https://github.com/NixOS/nix/issues/4359#issuecomment-907768110)
+* [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world)
 
 ## Nix on Darwin
 

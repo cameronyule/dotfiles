@@ -12,6 +12,7 @@
   home = {
     packages = with pkgs; [
       # Doom dependencies
+      coreutils
       fd
       ripgrep
       # Doom Module dependencies
@@ -53,17 +54,7 @@
         recursive = true;
       };
 
-      # Emacs Configuration.
-      # NOTE This violates Nix's principles regarding immutability, however the trade-off being
-      # made is that this allows editing the Emacs configuration without rebuilding our Nix
-      # configuration. As I'm actively working on my Emacs setup this is a trade-off worth
-      # making, but I may want to reconsider in future and clone the remote repository instead.
-      # "${config.xdg.configHome}/doom".source =
-      #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/src/dotemacs";
-
-      # FIXME emacs-libvterm compiling vterm at runtime necessitates passing Nix store paths
-      # to my Emacs configuration. This level of complexity doesn't feel worth it, as being
-      # able to access vterm within Emacs is a nice-to-have at best.
+      # Emacs Configuration.	
       "${config.xdg.configHome}/doom" = {
         source =   pkgs.fetchFromGitHub {
           owner = "cameronyule";
@@ -73,6 +64,14 @@
         };
         recursive = true;
       };
+
+      # TODO Make this a configurable option of the module.
+      # NOTE This violates Nix's principles regarding immutability, however the trade-off being
+      # made is that this allows editing the Emacs configuration without rebuilding our Nix
+      # configuration. As I'm actively working on my Emacs setup this is a trade-off worth
+      # making, but I may want to reconsider in future and clone the remote repository instead.
+      # "${config.xdg.configHome}/doom".source =
+      #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/src/dotemacs";
     };
 
     # Ensure Doom-provided binaries are included in PATH.
