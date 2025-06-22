@@ -1,20 +1,21 @@
 # Dotfiles
 
-These are my [dotfiles](https://dotfiles.github.io), which allow me to codify, automate, and reliably reproduce the configuration of my systems. They use [Nix](https://nixos.org), [nix-darwin](https://github.com/nix-darwin/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
+My [dotfiles](https://dotfiles.github.io), which allow me to automate and reliably reproduce the setup of my systems.
+They use [Nix](https://nixos.org), [nix-darwin](https://github.com/nix-darwin/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
 
 ## Organisation
 
-| File                                                       | Purpose                                     |
-| :--------------------------------------------------------- | :------------------------------------------ |
-| [flake.nix](flake.nix)                                     | The entrypoint to my dotfiles.              |
-| [modules/nix-core.nix](modules/nix-core.nix)               | Configuration of Nix.                       |
-| [modules/darwin](modules/darwin/default.nix)               | macOS configuration.                        |
-| [modules/darwin/packages.nix](modules/darwin/packages.nix) | App installation.                           |
-| [modules/home](modules/home/default.nix)                   | Home Manager initialisation.                |
-| [modules/home/emacs.nix](modules/home/emacs.nix)           | Doom Emacs configuration.                   |
-| [modules/home/terminal.nix](modules/home/terminal.nix)     | ZSH, Starship, fzf, bat, etc.               |
-| [modules/home/git.nix](modules/home/git.nix)               | Git configuration.                          |
-| [modules/home/ssh.nix](modules/home/ssh.nix)               | SSH configuration.                          |
+| File                                                                 | Purpose                                              |
+| :------------------------------------------------------------------- | :----------------------------------------------------|
+| [flake.nix](flake.nix)                                               | Entrypoint.                                          |
+| [hosts/](hosts/)                                                     | Host configs.                                        |
+| [hosts/nexus/default.nix](hosts/nexus/default.nix)                   | Host entrypoint.                                     |
+| [hosts/nexus/home.nix](hosts/nexus/home.nix)                         | Host configuration.                                  |
+| [modules/](modules)                                                  | Common functionality.                                |
+| [modules/home-manager/default.nix](modules/home-manager/default.nix) | Home Manager initialisation.                         |
+| [modules/home-manager/programs/](modules/home-manager/programs/)     | Common application configuration.                    |
+| [modules/nix/default.nix](modules/nix/defaalt.nix)                   | Nix configuration.                                   |
+| [modules/nix-darwin/default.nix](modules/nix-darwin/default.nix)     | Common macOS [defaults](https://macos-defaults.com). |
 
 ## Prerequisites
 
@@ -106,7 +107,7 @@ NB: This will not undo any of the configuration changes that have been applied t
 
 ### Roadmap
 
-See [roadmap](docs/roadmap.md) for further information.
+See [issues](https://github.com/cameronyule/dotfiles/issues) for further information.
 
 ### Formatting
 
