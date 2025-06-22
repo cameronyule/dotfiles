@@ -1,4 +1,4 @@
-{home-manager, username, ... }:
+{pkgs, username, ... }:
 {
   imports = [
     ../../modules/home-manager

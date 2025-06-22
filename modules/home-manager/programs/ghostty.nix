@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 {
-  homebrew = {
-    casks = [
-      "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
-    ];
-  };
+  # homebrew = {
+  #   casks = [
+  #     "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
+  #   ];
+  # };
 
   home.file = {
     # https://ghostty.org/docs/config
