@@ -62,6 +62,11 @@
           "longBreakTime" = 60; # duration of a 'long' break (seconds)
           "postureReminderEnabled" = 0; # disable posture reminders
         };
+
+        # https://github.com/pstadler/keybase-gpg-github/issues/19#issuecomment-1096733733
+        "org.gpgtools.pinentry-mac" = {
+          "DisableKeychain" = false;
+        };
       };
       dock = {
         persistent-apps = [

@@ -33,6 +33,10 @@
       enableZshIntegration = true;
     };
 
+    gpg = {
+      enable = true;
+    };
+
     zsh = {
       enable = true;
       
