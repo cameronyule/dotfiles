@@ -15,6 +15,7 @@
       ];
       home.packages  = with pkgs; [
         aider-chat
+        ice-bar
         rectangle
         signal-desktop-bin
         spotify
@@ -50,6 +51,7 @@
       CustomUserPreferences = {
         "com.knollsoft.Rectangle" = {
           "gapSize" = 15;
+          "hideMenubarIcon" = 0;
           "launchOnLogin" = 1;
         };
 
