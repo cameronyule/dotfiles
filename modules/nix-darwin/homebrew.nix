@@ -5,6 +5,8 @@
     nix-homebrew.darwinModules.nix-homebrew
   ];
 
+  homebrew.enable = true;
+
   nix-homebrew = {
     enable = true;
     user = "${username}";
