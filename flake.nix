@@ -11,8 +11,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    nix-homebrew.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.inputs.nix-darwin.follows = "nix-darwin";
+
+    homebrew-core.url = "github:homebrew/homebrew-core";
+    homebrew-core.flake = false;
+    homebrew-cask.url = "github:homebrew/homebrew-cask";
+    homebrew-cask.flake = false;
   };
 
   outputs =
@@ -21,6 +24,8 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
+      homebrew-core,
+      homebrew-cask,
       nixpkgs,
     }:
     let
