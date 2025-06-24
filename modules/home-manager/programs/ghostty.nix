@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{config, ...}: {
   # homebrew = {
   #   casks = [
   #     "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998

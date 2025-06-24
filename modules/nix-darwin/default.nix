@@ -1,5 +1,8 @@
-{self, username, ...}:
 {
+  self,
+  username,
+  ...
+}: {
   # Declare the user that will be running `nix-darwin`.
   users.users."${username}" = {
     name = "${username}";
@@ -45,7 +48,6 @@
       };
 
       CustomUserPreferences = {
-
       };
     };
   };

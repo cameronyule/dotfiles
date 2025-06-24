@@ -1,7 +1,4 @@
-{ inputs, pkgs, system, ... }:
-
-let
-in {
+{system, ...}: {
   imports = [
     ../../modules/nix
     ../../modules/nix-darwin

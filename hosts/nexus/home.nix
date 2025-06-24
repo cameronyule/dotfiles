@@ -1,11 +1,14 @@
-{pkgs, username, ... }:
 {
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ../../modules/home-manager
   ];
 
   home-manager = {
-    users.${username} = { pkgs, ... }: {
+    users.${username} = {pkgs, ...}: {
       imports = [
         ../../modules/home-manager/programs/emacs.nix
         ../../modules/home-manager/programs/fonts.nix
@@ -13,7 +16,7 @@
         ../../modules/home-manager/programs/ghostty.nix
         ../../modules/home-manager/programs/shell.nix
       ];
-      home.packages  = with pkgs; [
+      home.packages = with pkgs; [
         aider-chat
         ice-bar
         rectangle
@@ -70,13 +73,13 @@
       };
       dock = {
         persistent-apps = [
-          { app = "/System/Cryptexes/App/System/Applications/Safari.app"; }
-          { app = "/System/Applications/Mail.app"; }
-          { app = "/System/Applications/Calendar.app"; }
-          { app = "${pkgs.emacs}/Applications/Emacs.app"; }
-          { app = "/Applications/Ghostty.app"; }
-          { app = "/Applications/1Password.app"; }
-          { app = "/System/Applications/Utilities/Activity Monitor.app"; }
+          {app = "/System/Cryptexes/App/System/Applications/Safari.app";}
+          {app = "/System/Applications/Mail.app";}
+          {app = "/System/Applications/Calendar.app";}
+          {app = "${pkgs.emacs}/Applications/Emacs.app";}
+          {app = "/Applications/Ghostty.app";}
+          {app = "/Applications/1Password.app";}
+          {app = "/System/Applications/Utilities/Activity Monitor.app";}
         ];
       };
     };
@@ -90,21 +93,19 @@
       enableKeyMapping = true;
 
       # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
-      userKeyMapping =
-        let
-          lcmd = 30064771299; # 0x7000000e3
-          lopt = 30064771298; # 0x7000000e2
-        in
-        [
-          {
-            HIDKeyboardModifierMappingSrc = lcmd;
-            HIDKeyboardModifierMappingDst = lopt;
-          }
-          {
-            HIDKeyboardModifierMappingSrc = lopt;
-            HIDKeyboardModifierMappingDst = lcmd;
-          }
-        ];
+      userKeyMapping = let
+        lcmd = 30064771299; # 0x7000000e3
+        lopt = 30064771298; # 0x7000000e2
+      in [
+        {
+          HIDKeyboardModifierMappingSrc = lcmd;
+          HIDKeyboardModifierMappingDst = lopt;
+        }
+        {
+          HIDKeyboardModifierMappingSrc = lopt;
+          HIDKeyboardModifierMappingDst = lcmd;
+        }
+      ];
     };
   };
 }

@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     gh
     tree
@@ -39,10 +38,10 @@
 
     zsh = {
       enable = true;
-      
+
       enableCompletion = true;
       autosuggestion.enable = false;
-      
+
       syntaxHighlighting.enable = true;
       syntaxHighlighting.highlighters = [
         "main"

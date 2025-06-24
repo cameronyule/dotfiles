@@ -1,11 +1,15 @@
-{home-manager, username, pkgs, ... }:
 {
+  home-manager,
+  username,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../modules/home-manager
   ];
 
   home-manager = {
-    users.${username} = { pkgs, ... }: {
+    users.${username} = {pkgs, ...}: {
       imports = [
         ../../modules/home-manager/programs/emacs.nix
         ../../modules/home-manager/programs/fonts.nix
@@ -13,8 +17,7 @@
         ../../modules/home-manager/programs/shell.nix
       ];
       home.stateVersion = "24.11";
-      home.packages  = with pkgs; [
-
+      home.packages = with pkgs; [
       ];
     };
   };
@@ -27,7 +30,6 @@
     ];
 
     masApps = {
-
     };
   };
 
@@ -35,13 +37,13 @@
     defaults = {
       dock = {
         persistent-apps = [
-          { app = "/Applications/Safari.app"; }
-          { app = "/System/Applications/Mail.app"; }
-          { app = "/System/Applications/Calendar.app"; }
-          { app = "${pkgs.emacs}/Applications/Emacs.app"; }
-          { app = "/System/Applications/Utilities/Terminal.app"; }
-          { app = "/Applications/1Password.app"; }
-          { app = "/System/Applications/Utilities/Activity Monitor.app"; }
+          {app = "/Applications/Safari.app";}
+          {app = "/System/Applications/Mail.app";}
+          {app = "/System/Applications/Calendar.app";}
+          {app = "${pkgs.emacs}/Applications/Emacs.app";}
+          {app = "/System/Applications/Utilities/Terminal.app";}
+          {app = "/Applications/1Password.app";}
+          {app = "/System/Applications/Utilities/Activity Monitor.app";}
         ];
       };
     };

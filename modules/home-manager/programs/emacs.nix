@@ -2,11 +2,10 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: [ epkgs.vterm ];
+    extraPackages = epkgs: [epkgs.vterm];
   };
 
   home = {
@@ -31,11 +30,12 @@
       shfmt
       # Spelling
       (aspellWithDicts (
-        dicts: with dicts; [
-          en
-          en-computers
-          en-science
-        ]
+        dicts:
+          with dicts; [
+            en
+            en-computers
+            en-science
+          ]
       ))
       # vterm
       cmake
@@ -54,9 +54,9 @@
         recursive = true;
       };
 
-      # Emacs Configuration.	
+      # Emacs Configuration.
       "${config.xdg.configHome}/doom" = {
-        source =   pkgs.fetchFromGitHub {
+        source = pkgs.fetchFromGitHub {
           owner = "cameronyule";
           repo = "dotemacs";
           rev = "307e4113f8d99d4994bbe178d7e2baa3258b25df";

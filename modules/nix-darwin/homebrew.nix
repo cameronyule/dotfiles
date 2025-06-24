@@ -1,6 +1,10 @@
-{ nix-homebrew, homebrew-core, homebrew-cask, username, ... }:
-
 {
+  nix-homebrew,
+  homebrew-core,
+  homebrew-cask,
+  username,
+  ...
+}: {
   imports = [
     nix-homebrew.darwinModules.nix-homebrew
   ];
