@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ "$#" -lt 1 ]; then
+  echo "Error: This script must be called with the path to the commit message file as its first argument."
+  echo "Usage: .git/hooks/commit-msg <COMMIT_MSG_FILE>"
+  exit 1
+fi
+
+COMMIT_MSG_FILE="$1"
+
+if [ ! -f "$COMMIT_MSG_FILE" ] || [ ! -r "$COMMIT_MSG_FILE" ]; then
+  echo "Error: Commit message file does not exist or is not readable: ${COMMIT_MSG_FILE}"
+  exit 1
+fi
+
+npm exec --prefix internal/git commitlint -- -g internal/git/.commitlintrc -e $COMMIT_MSG_FILE
