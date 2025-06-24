@@ -3,6 +3,10 @@ _: {
 
   programs = {
     # keep-sorted start block=yes
+    actionlint = {
+      enable = true;
+      priority = 5;
+    };
     alejandra = {
       enable = true;
       priority = 4;
