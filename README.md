@@ -1,7 +1,7 @@
 # Dotfiles
 
-My [dotfiles](https://dotfiles.github.io), which allow me to automate and reliably reproduce the setup of my systems.
-They use [Nix](https://nixos.org), [nix-darwin](https://github.com/nix-darwin/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
+My [dotfiles](https://dotfiles.github.io), which allow me to automate and reliably reproduce the setup of my systems.  
+Built with [Nix](https://nixos.org), [nix-darwin](https://github.com/nix-darwin/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
 
 ## Organisation
 
@@ -40,13 +40,13 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 Apply the configuration for the first time directly from GitHub:
 
 ```shell
-nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake github:cameronyule/dotfiles
+nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake github:cameronyule/dotfiles
 ```
 
 Apply the configuration for the first time from a local working copy:
 
 ```shell
-nix run nix-darwin/nix-darwin-24.11#darwin-rebuild -- switch --flake .
+nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake .
 ```
 
 #### Post-Bootstrap Configuration
@@ -93,6 +93,34 @@ Switch to a specific previous state, where `x` is the desired state identifier:
 
 ``` shell
 darwin-rebuild switch --switch-generation x
+```
+
+### Package Upgrades
+
+The versions of packages available is determined by the version of [Nixpkgs](https://github.com/NixOS/nixpkgs) used. [Flakes](https://zero-to-nix.com/concepts/flakes/) lock all inputs by default so Nixpkgs is always locked to a specific revision. See [flake.lock](flake.lock) to determine which revision I'm currently using. This is the same as pinning all package versions to a specific point in time, which I find preferable for stability.
+
+While it is possible to upgrade a specific package in isolation – e.g., by adding a duplicate Nixpkgs input and locking that to the desired revision – the more frequent usecase is upgrading all outdated packages. There's no built-in equivalent of `brew outdated` in nix-darwin, but we can achieve the same results with [nvd](https://sr.ht/~khumba/nvd/).
+
+``` shell
+# update nixpkgs to the latest revision
+nix flake update nixpkgs
+
+# build (but not use) the closure for our flake
+sudo darwin-rebuild build --flake .
+
+# diff the updated closure against the installed closure
+nix run nixpkgs#nvd -- diff /run/current-system result
+```
+
+This will yield a diff showing the versions currently installed and which would be installed:
+
+``` shell
+❯ nix run nixpkgs#nvd -- diff /run/current-system result
+Version changes:
+[U.]  #01  bash-language-server                  5.4.0 -> 5.6.0
+[U.]  #02  bc                                    1.08.1 -> 1.08.2
+… etc …
+Closure size: 636 -> 628 (619 paths added, 627 paths removed, delta -8, disk usage +150.7MiB).
 ```
 
 ### Uninstall
