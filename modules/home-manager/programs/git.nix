@@ -19,6 +19,11 @@ _: {
           ff = "only";
         };
       };
+      difftastic = {
+        enable = true;
+        enableAsDifftool = true;
+        display = "inline";
+      };
     };
     ssh = {
       enable = true;
