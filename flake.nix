@@ -3,8 +3,8 @@
 
   inputs = {
     # keep-sorted start block=yes
-    flake-utils = {
-      url = "github:numtide/flake-utils";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -37,7 +37,7 @@
 
   outputs = inputs @ {
     # keep-sorted start
-    flake-utils,
+    flake-parts,
     home-manager,
     homebrew-cask,
     homebrew-core,
@@ -47,32 +47,43 @@
     self,
     treefmt-nix,
     # keep-sorted end
-  }: let
-    username = "cameronyule";
-    staticDarwinConfigurations = {
-      "nexus" = nix-darwin.lib.darwinSystem rec {
-        system = "aarch64-darwin";
-        specialArgs = inputs // {inherit username system;};
-        modules = [./hosts/nexus];
-      };
-      "nova" = nix-darwin.lib.darwinSystem rec {
-        system = "x86_64-darwin";
-        specialArgs = inputs // {inherit username system;};
-        modules = [./hosts/nova];
-      };
-    };
-  in
-    flake-utils.lib.eachDefaultSystem (
-      system: let
-        pkgs = import nixpkgs {inherit system;};
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = [
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+
+      perSystem = {pkgs, ...}: let
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./internal/nix/treefmt.nix;
       in {
         formatter = treefmtEval.config.build.wrapper;
         checks.formatting = treefmtEval.config.build.check self;
-      }
-    )
-    // {
-      # Merge static per-host configurations.
-      darwinConfigurations = staticDarwinConfigurations;
+      };
+
+      flake = {
+        darwinConfigurations = let
+          username = "cameronyule";
+
+          mkDarwinHost = {
+            system,
+            hostname,
+          }:
+            nix-darwin.lib.darwinSystem {
+              inherit system;
+              specialArgs = inputs // {inherit username system;};
+              modules = [./hosts/${hostname}];
+            };
+        in {
+          "nexus" = mkDarwinHost {
+            system = "aarch64-darwin";
+            hostname = "nexus";
+          };
+          "nova" = mkDarwinHost {
+            system = "x86_64-darwin";
+            hostname = "nova";
+          };
+        };
+      };
     };
 }
