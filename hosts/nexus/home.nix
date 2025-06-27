@@ -10,14 +10,16 @@
   home-manager = {
     users.${username} = {pkgs, ...}: {
       imports = [
+        # keep-sorted start
+        ../../modules/home-manager/programs/aider.nix
         ../../modules/home-manager/programs/emacs.nix
         ../../modules/home-manager/programs/fonts.nix
-        ../../modules/home-manager/programs/git.nix
         ../../modules/home-manager/programs/ghostty.nix
+        ../../modules/home-manager/programs/git.nix
         ../../modules/home-manager/programs/shell.nix
+        # keep-sorted end
       ];
       home.packages = with pkgs; [
-        aider-chat
         ice-bar
         rectangle
         signal-desktop-bin
