@@ -1,7 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    # keep-sorted start
     gh
     tree
+    # keep-sorted end
   ];
 
   programs = {

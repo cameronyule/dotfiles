@@ -28,12 +28,16 @@
 
   homebrew = {
     casks = [
+      # keep-sorted start
       # NOTE The Dropbox cask is non-functional on this host, so I've installed
       # the package manually. (Their package installer still works.)
       # "dropbox"
+      # keep-sorted end
     ];
 
     masApps = {
+      # keep-sorted start
+      # keep-sorted end
     };
   };
 
