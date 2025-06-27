@@ -20,11 +20,13 @@
         # keep-sorted end
       ];
       home.packages = with pkgs; [
+        # keep-sorted start
         ice-bar
         rectangle
         signal-desktop-bin
         spotify
         zoom-us
+        # keep-sorted end
       ];
       home.stateVersion = "24.11";
     };

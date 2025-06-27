@@ -1,10 +1,6 @@
-{system, ...}: {
+{...}: {
   imports = [
-    ../../modules/nix
-    ../../modules/nix-darwin
-    ../../modules/nix-darwin/homebrew.nix
+    ../common/darwin.nix
     ./home.nix
   ];
-
-  nixpkgs.hostPlatform = "${system}";
 }

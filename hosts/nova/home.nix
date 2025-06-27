@@ -11,13 +11,17 @@
   home-manager = {
     users.${username} = {pkgs, ...}: {
       imports = [
+        # keep-sorted start
         ../../modules/home-manager/programs/emacs.nix
         ../../modules/home-manager/programs/fonts.nix
         ../../modules/home-manager/programs/git.nix
         ../../modules/home-manager/programs/shell.nix
+        # keep-sorted end
       ];
       home.stateVersion = "24.11";
       home.packages = with pkgs; [
+        # keep-sorted start
+        # keep-sorted end
       ];
     };
   };
