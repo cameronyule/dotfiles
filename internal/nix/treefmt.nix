@@ -26,6 +26,14 @@ _: {
       enable = true;
       priority = 1;
     };
+    typos = {
+      enable = true;
+      priority = 7;
+    };
+    zizmor = {
+      enable = true;
+      priority = 6;
+    };
     # keep-sorted end
   };
 
