@@ -19,7 +19,7 @@
 
         attribute-author: false
         attribute-committer: false
-        attribute-co-authored-by: false
+        attribute-co-authored-by: true
         git-commit-verify: false
       '';
     };
