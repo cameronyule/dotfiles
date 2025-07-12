@@ -24,6 +24,8 @@
       # Nix
       nixd
       nixfmt-rfc-style
+      # Python
+      basedpyright
       # SH
       bash-language-server
       shellcheck
