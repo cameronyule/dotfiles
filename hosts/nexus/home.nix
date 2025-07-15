@@ -50,8 +50,8 @@
       # keep-sorted start
       "1Password for Safari" = 1569813296;
       "AdGuard for Safari" = 1440147259;
-      Headspace = 493145008;
       "Pins for Pinboard" = 1547106997;
+      Headspace = 493145008;
       WhatsApp = 310633997;
       Xcode = 497799835;
       # keep-sorted end
