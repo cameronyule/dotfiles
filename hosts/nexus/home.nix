@@ -33,7 +33,7 @@
   };
 
   homebrew = {
-    # TODO Migrate to Nix packages where possible. Casks are not pinned.
+    # TODO Migrate to Nix packages where possible.
     casks = [
       # keep-sorted start
       "1password" # https://github.com/NixOS/nixpkgs/issues/254944
