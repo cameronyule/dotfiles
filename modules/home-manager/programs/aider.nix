@@ -4,7 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    pkgs.aider-chat
+    pkgs.aider-chat-with-playwright
   ];
 
   home.file = {
