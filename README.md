@@ -139,7 +139,7 @@ See [issues](https://github.com/cameronyule/dotfiles/issues) for further informa
 
 ### Formatting
 
-Run [nix fmt](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-fmt) with the [nixfmt](https://github.com/NixOS/nixfmt) formatter:
+Run [nix fmt](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-fmt), which executes the [treefmt configuration](internal/nix/treefmt.nix):
 
 ``` shell
 nix fmt
@@ -147,8 +147,8 @@ nix fmt
 
 ### Linting
 
-Run the [statix](https://github.com/oppiliappan/statix) linter in a local working copy:
+Run [nix flake check](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-flake-check), which executes the [treefmt configuration](internal/nix/treefmt.nix):
 
 ```shell
-nix run nixpkgs#statix check .
+nix flake check
 ```
