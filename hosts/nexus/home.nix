@@ -59,6 +59,10 @@
     };
   };
 
+  services = {
+    tailscale.enable = true;
+  };
+
   system = {
     defaults = {
       CustomUserPreferences = {
