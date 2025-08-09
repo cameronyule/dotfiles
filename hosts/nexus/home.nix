@@ -43,6 +43,7 @@
       "little-snitch"
       "lookaway"
       "meetingbar"
+      "rustdesk" # https://github.com/NixOS/nixpkgs/blob/fc756aa6f5d3e2e5666efcf865d190701fef150a/pkgs/by-name/ru/rustdesk-flutter/package.nix#L256
       # keep-sorted end
     ];
 
