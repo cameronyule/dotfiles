@@ -1,8 +1,4 @@
-{
-  nixpkgs,
-  system,
-  ...
-}: {
+{system, ...}: {
   imports = [
     ../../modules/nix
     ../../modules/nix-darwin
