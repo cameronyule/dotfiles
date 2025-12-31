@@ -21,7 +21,9 @@
       ];
       home.packages = with pkgs; [
         # keep-sorted start
+        ghostty-bin
         ice-bar
+        meetingbar
         rectangle
         signal-desktop-bin
         spotify
@@ -39,10 +41,8 @@
       "1password" # https://github.com/NixOS/nixpkgs/issues/254944
       "1password-cli"
       "dropbox"
-      "ghostty" # https://github.com/NixOS/nixpkgs/issues/388984#issuecomment-2715508998
       "little-snitch"
       "lookaway"
-      "meetingbar"
       "rustdesk" # https://github.com/NixOS/nixpkgs/blob/fc756aa6f5d3e2e5666efcf865d190701fef150a/pkgs/by-name/ru/rustdesk-flutter/package.nix#L256
       # keep-sorted end
     ];
@@ -92,7 +92,7 @@
           {app = "/System/Applications/Mail.app";}
           {app = "/System/Applications/Calendar.app";}
           {app = "${pkgs.emacs}/Applications/Emacs.app";}
-          {app = "/Applications/Ghostty.app";}
+          {app = "${pkgs.ghostty-bin}/Applications/Ghostty.app";}
           {app = "/Applications/1Password.app";}
           {app = "/System/Applications/Utilities/Activity Monitor.app";}
         ];
