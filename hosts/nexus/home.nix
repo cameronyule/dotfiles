@@ -22,6 +22,7 @@
       home.packages = with pkgs; [
         # keep-sorted start
         container
+        gemini-cli
         ghostty-bin
         ice-bar
         meetingbar
