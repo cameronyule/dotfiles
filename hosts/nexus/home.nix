@@ -21,6 +21,7 @@
       ];
       home.packages = with pkgs; [
         # keep-sorted start
+        container
         ghostty-bin
         ice-bar
         meetingbar
