@@ -7,6 +7,18 @@
     ../../modules/home-manager
   ];
 
+  # FIXME: correct installation of container when possible
+  # https://github.com/NixOS/nixpkgs/issues/445648#issuecomment-3341466897
+  environment.systemPackages = with pkgs; [
+    # keep-sorted start
+    container
+    # keep-sorted end
+  ];
+
+  environment.pathsToLink = [
+    "/libexec"
+  ];
+
   home-manager = {
     users.${username} = {pkgs, ...}: {
       imports = [
@@ -21,7 +33,6 @@
       ];
       home.packages = with pkgs; [
         # keep-sorted start
-        container
         gemini-cli
         ghostty-bin
         ice-bar
