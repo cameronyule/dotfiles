@@ -23,7 +23,6 @@
     users.${username} = {pkgs, ...}: {
       imports = [
         # keep-sorted start
-        ../../modules/home-manager/programs/aider.nix
         ../../modules/home-manager/programs/emacs.nix
         ../../modules/home-manager/programs/fonts.nix
         ../../modules/home-manager/programs/ghostty.nix
@@ -38,7 +37,7 @@
         ice-bar
         meetingbar
         rectangle
-        signal-desktop-bin
+        signal-desktop
         spotify
         zoom-us
         # keep-sorted end

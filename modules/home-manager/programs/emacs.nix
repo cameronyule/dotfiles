@@ -23,7 +23,7 @@
       pandoc
       # Nix
       nixd
-      nixfmt-rfc-style
+      nixfmt
       # Python
       basedpyright
       # SH
@@ -35,8 +35,6 @@
         dicts:
           with dicts; [
             en
-            en-computers
-            en-science
           ]
       ))
       # vterm
