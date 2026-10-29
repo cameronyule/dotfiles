@@ -18,6 +18,10 @@
       url = "github:homebrew/homebrew-core";
       flake = false;
     };
+    llm-agents = {
+      url = "github:numtide/llm-agents.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +45,7 @@
     home-manager,
     homebrew-cask,
     homebrew-core,
+    llm-agents,
     nix-darwin,
     nix-homebrew,
     nixpkgs,

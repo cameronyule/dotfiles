@@ -1,4 +1,5 @@
 {
+  llm-agents,
   pkgs,
   username,
   ...
@@ -9,9 +10,11 @@
 
   # FIXME: correct installation of container when possible
   # https://github.com/NixOS/nixpkgs/issues/445648#issuecomment-3341466897
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs;
+  with llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
     # keep-sorted start
     container
+    gemini-cli
     # keep-sorted end
   ];
 
@@ -32,7 +35,6 @@
       ];
       home.packages = with pkgs; [
         # keep-sorted start
-        gemini-cli
         ghostty-bin
         ice-bar
         meetingbar
